@@ -1,0 +1,170 @@
+body {
+	margin: 0;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: red;
+}
+
+#cont {
+	width: 1440px;
+	margin: auto;
+}
+
+#cont_right {
+	float: left;
+	width: 1271px;
+	height: 830px;
+}
+
+#cont_toolbar {
+	width: 1271px;
+	height: 41px;
+}
+
+#cont_toolbar ul {
+	list-style: none;
+	float: right;
+}
+
+#cont_toolbar ul li { 
+	background-color: #e5ecf1;
+	border: 1px solid gray;
+	float: right;
+	margin-right: 5px; 
+}
+
+#cont_toolbar ul li span {
+	cursor: pointer;
+	padding: 3px;
+}
+
+#cont_toolbar ul li span:hover {
+	background-color: #4092d7;
+}
+
+#cont_list {
+	width: 1271px;
+	height: 743px;
+	padding-top: 10px;
+	padding-left: 10px
+}
+
+#cont_listContent {
+	float: left;
+	height: 739px;
+	border: 1px solid #bababa;
+	width: 1257px;
+}
+
+#cont_listContent_table {
+	width: 1000px;
+	border-collapse: collapse;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+#cont_listContent_table th {
+/* 	background-color: #e5ecf1; */
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-weight: bold;
+	color: black;
+}
+
+#cont_listContent_table td {
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#board_write_formBox {
+	width: 800px;
+	height: 750px;
+	margin: 30px;
+	border: 1px solid gray;
+	display: none;
+	position: absolute;
+	background-color: white;
+}
+
+#board_write_form_table {
+	border-collapse: collapse;
+	border: 1px solid gray;
+	margin: auto;
+	margin-top: 10px;
+}
+
+#board_write_form_table td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#board_write_form_table tr {
+	border-bottom: 1px solid gray
+}
+
+#board_write_form_table th {
+	border-right: 1px solid gray
+}
+
+textarea {
+	resize: none;
+}
+
+#mask {
+	background-color: gray;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	display: none;
+}
+
+input {
+	margin-left: 5px;
+	border: 0;
+	font-size: 16px;
+}
+
+
+#btnSubmit {
+	border: 1px solid gray;
+}
+
+#btnReset {
+	border: 1px solid gray;
+}
+
+#btnCancel {
+	border: 1px solid gray;
+}
+
+#btnInBox {
+	width: 30%;
+	display: inline-block;
+	margin: 15px 280px;
+}
+
+input[type=button] {
+	cursor: pointer;
+}
+
+input[type=reset] {
+	cursor: pointer;
+}
+
+button {
+	cursor: pointer;
+}
+
+
+
+
+
+

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.my.test.mapper.ProductMapper;
+import com.my.test.model.ACCDeptEmp;
 import com.my.test.model.Product;
 
 @Service
@@ -36,7 +37,7 @@ public class ProductServiceImpl implements ProductService{
 			return proMapper.delProduct(code);
 		}
 
-		@Transactional
+		@Transactional 
 	    public int addAllProduct(List<Product> pdList) {
 	        
 	        int num = 0;
@@ -51,7 +52,6 @@ public class ProductServiceImpl implements ProductService{
 	        }
 	        return num;
 	    }
-	    
-	
+
 	
 }

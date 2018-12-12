@@ -15,5 +15,5 @@ public interface ProductService {
     public int delProduct(String code);
     
     public int addAllProduct(List<Product> productList);
-    
+
 }

@@ -436,8 +436,8 @@
 			<li>신용카드</li>
 		</ul>
 		<div>
-			<div id="gridView" style="float: left"></div>
-			<div id='sampleForm' style="width: 350px; height: auto; float: left;"></div>
+			<div id="gridView" style="float: left; margin: 10px 10px 0 10px"></div>
+			<div id='sampleForm' style="width: 350px; height: auto; float: left; margin: 10px 0 0 0"></div>
 		</div>
 		<div>
 			금융기관

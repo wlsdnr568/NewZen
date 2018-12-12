@@ -254,10 +254,89 @@
 </script>
 
 <head>
+<script>
+		function openNav() {
+		    document.getElementById("mySidebar").style.width = "250px";
+		    document.getElementById("main").style.marginLeft = "250px";
+		}
+		
+		function closeNav() {
+		    document.getElementById("mySidebar").style.width = "0";
+		    document.getElementById("main").style.marginLeft= "0";
+		}
+	</script>
+	<style type="text/css">
+	.sidebar {
+	   height: 100%;
+	   width: 0;
+	   position: fixed;
+	   z-index: 88;
+	   top: 0;
+	   left: 0;
+	   background-color: #111;
+	   overflow-x: hidden;
+	   transition: 0.5s;
+	   padding-top: 60px;
+	}
+	
+	.sidebar a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    display: block;
+	    transition: 0.3s;
+	}
+	
+	.sidebar a:hover {
+	    color: #f1f1f1;
+	}
+	
+	.sidebar .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
+	
+	.openbtn {
+	    font-size: 15px;
+	    cursor: pointer;  
+	    background-color: #111;
+	    color: white;
+	    padding: 10px 15px;
+	    border: none;
+	}
+	
+	.openbtn:hover {
+	    background-color: #444;
+	}
+	
+	#main {
+	    transition: margin-left .5s;
+	    padding: 16px;
+	}
+	
+	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="/test/test1">test1</a>
+	  <a href="/test/test2">test2</a>
+	  <a href="/test/test3">test3</a>
+	  <a href="/test/test4">test4</a>
+	  <a href="/test/test5">test5</a>
+	  <a href="/test/test6">test6</a>
+	</div>
+	
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()">☰ 페이지</button>  
+	</div>
 
 	<div id='jqxWidget'
 		style="font-size: 13px; font-family: Verdana; float: left;">

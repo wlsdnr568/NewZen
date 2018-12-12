@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.my.test.model.ACCDeptEmp;
 import com.my.test.model.Product;
 
 @Mapper

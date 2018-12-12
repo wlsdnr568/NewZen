@@ -9,6 +9,9 @@
 <script type="text/javascript" src="<c:url value="/resources/js/jquery-1.12.4.min.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/jquery-ui.js"/>"></script>  
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <link rel="stylesheet" href="<c:url value="/resources/jqwidgets/styles/jqx.base.css"/>">
 <link rel="stylesheet" href="<c:url value="/resources/jqwidgets/styles/jqx.office.css"/>">
 <link rel="stylesheet" href="<c:url value="/resources/jqwidgets/styles/jqx.material.css"/>">
@@ -370,6 +373,20 @@
 </head>
 <body>
 
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="/test/test1">test1</a>
+	  <a href="/test/test2">test2</a>
+	  <a href="/test/test3">test3</a>
+	  <a href="/test/test4">test4</a>
+	  <a href="/test/test5">test5</a>
+	  <a href="/test/test6">test6</a>
+	</div>
+	
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()">☰ 페이지</button>  
+	</div>
+	
 	<div class="title" style="width: 50%;">
 		<span>RealGrid on Java Spring MVC and SQLServer</span>
 	</div>

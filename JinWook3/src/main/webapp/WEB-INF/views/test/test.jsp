@@ -1,13 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-
 <script type="text/javascript" src="<c:url value="/resources/js/realgridjs-lic.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/realgridjs_eval.1.1.30.min.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/realgridjs-api.1.1.30.js" />"></script>       
-<script type="text/javascript" src="<c:url value="/resources/js/jquery-3.3.1.min.js"/>"></script>  
+<script type="text/javascript" src="<c:url value="/resources/js/jquery-3.3.1.min.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/js/jszip.min.js"/>"></script>  
 
 <script type="text/javascript">
 	
@@ -15,7 +14,7 @@
 	    var dataProvider;
 	    
 	    function setupGridJs(id, width, height) {
-	    	RealGridJS.setRootContext("/JinWook3/resources/js");
+	    	RealGridJS.setRootContext("/test/resources/js");
 	        $("#"+id).css({ width : width, height : height });
 	        gridView = new RealGridJS.GridView(id);
 	        dataProvider = new RealGridJS.LocalDataProvider();
@@ -249,16 +248,118 @@
 	    
 		}
 		
+		$(function(){
+			$("#excel").on("click",function(){
+				
+				var excelType = $(':radio[name="excelType"]:checked').val() == "2007";
+				var showProgress = $("#chkShowProgress").is(":checked");
+				var applyDynamicStyles = $("#chkApplyDynamicStyles").is(":checked");
+			
+				gridView.exportGrid({
+				    type: "excel",
+				    target: "local",
+				    fileName: "gridExportSample.xlsx",
+				    showProgress: showProgress,
+				    applyDynamicStyles: applyDynamicStyles, 
+				    progressMessage: "엑셀 Export중입니다.",
+				    indicator: $(':radio[name="indicator"]:checked').val(),
+				    header: $(':radio[name="header"]:checked').val(),
+				    footer: $(':radio[name="footer"]:checked').val(),
+				    compatibility: excelType,
+				    done: function () {  //내보내기 완료 후 실행되는 함수
+				        alert("done excel export")
+				    }
+				});
+				
+			}) 
+		});
+		
 	</script>
-
 <head>
+	<script>
+		function openNav() {
+		    document.getElementById("mySidebar").style.width = "250px";
+		    document.getElementById("main").style.marginLeft = "250px";
+		}
+		
+		function closeNav() {
+		    document.getElementById("mySidebar").style.width = "0";
+		    document.getElementById("main").style.marginLeft= "0";
+		}
+	</script>
+	<style type="text/css">
+	.sidebar {
+	   height: 100%;
+	   width: 0;
+	   position: fixed;
+	   z-index: 88;
+	   top: 0;
+	   left: 0;
+	   background-color: #111;
+	   overflow-x: hidden;
+	   transition: 0.5s;
+	   padding-top: 60px;
+	}
+	
+	.sidebar a {
+	    padding: 8px 8px 8px 32px;
+	    text-decoration: none;
+	    font-size: 25px;
+	    color: #818181;
+	    display: block;
+	    transition: 0.3s;
+	}
+	
+	.sidebar a:hover {
+	    color: #f1f1f1;
+	}
+	
+	.sidebar .closebtn {
+	    position: absolute;
+	    top: 0;
+	    right: 25px;
+	    font-size: 36px;
+	    margin-left: 50px;
+	}
+	
+	.openbtn {
+	    font-size: 15px;
+	    cursor: pointer;  
+	    background-color: #111;
+	    color: white;
+	    padding: 10px 15px;
+	    border: none;
+	}
+	
+	.openbtn:hover {
+	    background-color: #444;
+	}
+	
+	#main {
+	    transition: margin-left .5s;
+	    padding: 16px;
+	}
+	
+	</style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-
-	<input type="hidden" id="path" value="${contextPath}">
-
+<body>	
+	
+	<div id="mySidebar" class="sidebar">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	  <a href="/test/test1">test1</a>
+	  <a href="/test/test2">test2</a>
+	  <a href="/test/test3">test3</a>
+	  <a href="/test/test4">test4</a>
+	  <a href="/test/test5">test5</a>
+	  <a href="/test/test6">test6</a>
+	</div>
+	
+	<div id="main">
+	  <button class="openbtn" onclick="openNav()">☰ 페이지</button>  
+	</div>
+	
 	<div class="title" style="width: 50%; margin: 0 auto">
 		<span>RealGrid on Java Spring MVC and SQLServer</span>
 	</div>
@@ -270,7 +371,9 @@
 		<input type="button" id="btnAppend" value="줄 추가"> 
 		<input type="button" id="btnSaveData" value="데이터 저장">
 		<input type="button" id="btnSaveAllData" value="모두 저장" />
+		<input type="button" id="excel" value="엑셀출력">
 	</div>
+	
 
 </body>
 </html>

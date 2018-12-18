@@ -129,7 +129,6 @@
 </head>
 <body>
 
-
 	<div id="realgrid" style="width: 50%; height: 200px; border: 1px solid black; margin: 0 auto; margin-top: 200px"></div>
 	<button type="button" style="margin: 0 auto" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#addRowDialog">Add rows</button>
   
@@ -146,10 +145,8 @@
 				</div>
 				
 				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" id="dialog_btnAddRow">Add
-						Checked Rows</button>
-					<button type="button" class="btn btn-default" id="dialog_btnClose"
-						data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary" id="dialog_btnAddRow">AddChecked Rows</button>
+					<button type="button" class="btn btn-default" id="dialog_btnClose" data-dismiss="modal">Close</button>
 				</div>
 			
 			</div>

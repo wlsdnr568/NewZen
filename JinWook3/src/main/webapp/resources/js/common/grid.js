@@ -5,13 +5,12 @@ var dataProviderPopup;
 
 $(function() {
 	
-	RealGridJS.setTrace(false);
+	RealGridJS.setTrace(false);  
 	RealGridJS.setRootContext("/test/resources/js");
 
 	dataProvider = new RealGridJS.LocalDataProvider();
 	gridView = new RealGridJS.GridView("realgrid");
 	gridView.setDataSource(dataProvider);
-	
 	
 	//메인 그리드 필드 값
 	var fields = [ {
@@ -25,13 +24,15 @@ $(function() {
 	}, {
 		fieldName : "field4"
 	}, {
-		fieldName : "field4-1"
+		fieldName : "field4a"
 	}, {
 		fieldName : "field5"
 	}, {
-		fieldName : "field5-1"
+		fieldName : "field5a"
 	}, {
 		fieldName : "field6"
+	},{
+		fieldName : "field6a"
 	}, {
 		fieldName : "field7"
 	}, {
@@ -50,7 +51,10 @@ $(function() {
 		header : {
 			text : "일"
 		},
-		width : 30
+		width : 30,
+		styles : {
+			textAlignment : "center"
+		}
 	}, {
 		name : "col2",
 		fieldName : "field2",
@@ -59,7 +63,10 @@ $(function() {
 		},
 		width : 60,
 		readOnly : "true",
-		editable : false
+		editable : false,
+		styles : {
+			textAlignment : "center"
+		}
 		
 	}, {
 		name : "col3",
@@ -67,7 +74,10 @@ $(function() {
 		header : {
 			text : "구분"
 		},
-		width : 60
+		width : 60,
+		styles : {
+			textAlignment : "center"
+		}
 	}, {
 		"type" : "group",
 		"name" : "계정과목",
@@ -77,68 +87,98 @@ $(function() {
 			{
 				name : "col4",
 				fieldName : "field4",
-				header : {
+				header : { 
 					text : "코드"
 				},
-				width : 55
-			}, {
+				width : 55,
+				textAlignment : "center"
+			}, { 
 				name : "col4",
-				fieldName : "field4-1",
+				fieldName : "field4a",
 				header : {
 					text : "계정과목명"
-				},
+				},  
 				readOnly : "true",
 				editable : false,
-				width : 145
+				width : 145,
+				textAlignment : "center"
 			}
-		]
+		],
+		"hideChildHeaders" : "true",
+		"textAlignment" : "center"
 
 	}, {
 		"type" : "group",
 		"name" : "거래처",
 		"orientation" : "horizontal",
 		"width" : 200,
-		"columns" : [ {
-			name : "col5",
-			fieldName : "field5",
-			header : {
-				text : "코드"
-			},
-			width : 55
-		}, {
-			name : "col5",
-			fieldName : "field5-1",
-			header : {
-				text : "거래처명"
-			},
-			width : 145,
-			readOnly : "true",
-			editable : false
-		} ]
+		"columns" : [ 
+			{
+				name : "col5",
+				fieldName : "field5",
+				header : {
+					text : "코드"
+				},
+				width : 55,
+				textAlignment : "center"
+			}, {
+				name : "col5",
+				fieldName : "field5a",
+				header : {
+					text : "거래처명"
+				},
+				width : 145,
+				readOnly : "true",
+				editable : false,
+				textAlignment : "center"
+			} 
+		],
+		"hideChildHeaders" : "true",
+		"textAlignment" : "center"
+	
 	}, {
-		name : "col6",
-		fieldName : "field6",
-		header : {
-			text : "적요"
-		},
-		width : 150,
-		footer : {
-			text : "합계"
-		}
+		"type" : "group",
+		"name" : "적요",
+		"orientation" : "horizontal",
+		"width" : 200,
+		"columns" : [
+			{
+				name : "col6",
+				fieldName : "field6",
+				header : {
+					text : "코드"
+				},
+				width: 55
+			},{
+				name : "col6",
+				fieldName : "field6a",
+				header : {
+					text : "적요명"
+				},
+				width : 145,
+				readOnly : "true",
+				editable : false
+			}
+		],
+		"hideChildHeaders" : "true",
+		"textAlignment" : "center" 
+	
 	}, {
 		name : "col7",
 		fieldName : "field7",
 		header : {
 			text : "차변"
 		},
-		width : 100
+		width : 100,
+		textAlignment : "center"
 	}, {
 		name : "col8",
 		fieldName : "field8",
 		header : {
 			text : "대변"
 		},
-		width : 100
+		width : 100,
+		textAlignment : "center"
 	}, {
 		name : "col9",
 		fieldName : "field9",
@@ -146,7 +186,8 @@ $(function() {
 			text : "휴일"
 		},
 		width : 50,
-		readOnly : "true"
+		readOnly : "true",
+		textAlignment : "center"
 	} ]
 	gridView.setColumns(columns);
 
@@ -196,24 +237,15 @@ $(function() {
 	
     gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
     	
-    	if(key == "39" && gridView.getCurrent().fieldIndex == 1 && gridView.getValue(gridView.getCurrent().itemIndex,1) == undefined){
-			return false;  
-		} 
-    	 
-		if(key == "39" && gridView.getCurrent().fieldIndex == 3 && gridView.getValue(gridView.getCurrent().itemIndex,3) == undefined){
-			return false;
-		} 
-		
-		if(key == "39" && gridView.getCurrent().fieldIndex == 4 && gridView.getValue(gridView.getCurrent().itemIndex,4) == undefined ){
-						
-			return false;
+    	if(key == "40" || key == "13" || key == "39" && gridView.getCurrent().fieldIndex == 1 && gridView.getValue(gridView.getCurrent().itemIndex,1) == undefined){
+    		return false;  
 		}
-		
-		if(key == "39" && gridView.getCurrent().fieldIndex == 5 && gridView.getValue(gridView.getCurrent().itemIndex,5) == undefined){
+    	
+		if(key == "40" || key == "13" || key == "39" && gridView.getCurrent().fieldIndex == 3 && gridView.getValue(gridView.getCurrent().itemIndex,3) == undefined){
 			return false;
 		} 
 		
-	};
+	}; 
     
     //데이터셀 하나 클릭시 이벤트
 	gridView.onDataCellClicked =  function (grid, index) {
@@ -226,6 +258,23 @@ $(function() {
 			gridView.onGetEditValue = function (grid, index, editResult){
 				
 				gridView.commit(false);
+				
+				if(index.columns == "col1"){
+					
+					var current = gridView.getCrruent();
+					var CuItI = current.itemIndex;
+					var CuCo = current.column;
+					var CuDataRow = current.dataRow;
+					
+					var index = {  
+						itemIndex : CuItI,
+						column : "col3",
+						dataRow : CuDataRow,
+						fieldName : "field3"
+					};
+					
+					gridView.setCurrent(index);
+				}
 				 
 				if (index.column == "col3"){
 					
@@ -253,23 +302,29 @@ $(function() {
 		}else if(index.fieldIndex == "4"){
 			$("#helpBox").text("계정코드를 입력하세요. 기능키F2-도움창, 명입력후 엔터-도움창");
 			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
-				
 				if(key == 113){
-					
-					RealGridJS.setTrace(false);
-				    RealGridJS.setRootContext("/test/resources/js");
-					
-			        dataProviderPopup = new RealGridJS.LocalDataProvider();
-				    setFields(dataProviderPopup);
-				    gridViewPopup = new RealGridJS.GridView("realgridPopup");
-				    gridViewPopup.setDataSource(dataProviderPopup);   
-				    setColumns(gridViewPopup);
-				    setOptions(gridViewPopup);
-				    setRows(dataProviderPopup);
-				    
-				    $("#realgridPopup,#realgridPopup-background").fadeIn("fast");
+					modal();
+					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+						return true
+					}
 				}
-				
+			}
+		}else if(index.fieldIndex == "6"){
+			$("#helpBox").text("거래처코드를 입력하세요. 기능키F2-도움창, '+' 또는 '00000'치고  명입력시 자동검색 또는 신규입력");
+			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+				if(key == 113){
+					modal2();
+					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+						return true
+					}
+				}
+			}
+		}else if(index.fieldIndex == "8"){
+			$("#subBox").css("display","block");
+			gridView.onDataCellClicked = function (grid, index) {
+				if(index.fieldIndex != "8"){
+					$("#subBox").css("display","none");
+				}
 			}
 		}else{  
 			$("#helpBox").text("");
@@ -288,6 +343,23 @@ $(function() {
 			gridView.onGetEditValue = function (grid, index, editResult){
 				
 				gridView.commit(false);
+				
+				if(index.columns == "col1"){
+					
+					var current = gridView.getCrruent();
+					var CuItI = current.itemIndex;
+					var CuCo = current.column;
+					var CuDataRow = current.dataRow;
+					
+					var index = {
+						itemIndex : CuItI,
+						column : "col3",
+						dataRow : CuDataRow,
+						fieldName : "field3"
+					};
+					
+					gridView.setCurrent(index);
+				}
 				
 				if (index.column == "col3"){
 					
@@ -308,7 +380,7 @@ $(function() {
 					}else if(editvalue == "6"){ 
 						dataProvider.setValue(dataRow, fieldIndex, "결산대변")
 					}
-					
+					  
 				};
 
 			};
@@ -316,40 +388,69 @@ $(function() {
 			$("#helpBox").text("계정코드를 입력하세요. 기능키F2-도움창, 명입력후 엔터-도움창");
 			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
 				if(key == 113){
-					
-					$("#realgridPopup,#realgridPopup-background").fadeIn("fast");
-					
-					gridViewPopup.resetSize();
-					
-					RealGridJS.setTrace(false);
-				    RealGridJS.setRootContext("/test/resources/js");
-					
-			        dataProviderPopup = new RealGridJS.LocalDataProvider();
-				    setFields(dataProviderPopup);
-				    gridViewPopup = new RealGridJS.GridView("realgridPopup");
-				    gridViewPopup.setDataSource(dataProviderPopup);   
-				    setColumns(gridViewPopup);
-				    setOptions(gridViewPopup);
-				    setRows(dataProviderPopup);
-				    
-				    
+					modal();
+					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+						return true;
+					}
 				}
 			}
+			
+		}else if(newIndex.fieldIndex == "6"){
+			$("#helpBox").text("거래처코드를 입력하세요. 기능키F2-도움창, '+' 또는 '00000'치고  명입력시 자동검색 또는 신규입력");
+			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+				if(key == 113){
+					modal2();
+					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+						return true;
+					}
+				}
+			}
+		}else if(newIndex.fieldIndex == "8"){
+			$("#helpBox").text("적요코드를 입력하세요. 기능키F2-도움창, 등록적요 수정은 기능키-F8입니다.");
+			$("#subBox").css("display","block");
+			
+			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+				
+				if(key == 37 || key == 39){
+					$("#subBox").css("display","none");
+				}
+				
+				if(key == 13 || key == 9){
+					
+					gridView.onGetEditValue = function (grid, index, editResult){
+						
+						gridView.commit(false);
+						
+						if (index.column == "col6"){
+							
+							var editvalue = editResult.value;
+							var fieldIndex = gridView.getCurrent().fieldIndex;
+							var dataRow = gridView.getCurrent().dataRow;
+							
+							if(editvalue == "1"){
+								dataProvider.setValue(dataRow, fieldIndex+1, "당좌예금 현금입금")
+							}else if(editvalue == "2"){
+								dataProvider.setValue(dataRow, fieldIndex+1, "당좌예금 현금인출")
+							}
+							  
+						};
+					}
+				}
+			};
+			
 		}else{
 			$("#helpBox").text("");
 		}
 		
 	};
 	
-	
 });
 ///////////////////////////////////////// 메인 그리드 이벤트 정리
-
 
 ////////////////////////////////////도움창 그리드 이벤트 정리
 function setFields(provider) {
     provider.setFields([{
-        fieldName: "code"
+        fieldName: "code1"
     }, {
         fieldName: "id"
     }, {
@@ -359,25 +460,25 @@ function setFields(provider) {
 
 function setColumns(grid) {
     grid.setColumns([{
-        fieldName: "code",
-        name: "code",
-        width: 70,
+        fieldName: "code1",
+        name: "code1",  
+        width: 48,
         styles: {
             textAlignment: "center"
         },
         header: {text: "코드"}
     }, {
-         fieldName: "id",
+        fieldName: "id",  
         name: "id",
-        width: 150,
+        width: 120,  
         styles: {
             textAlignment: "center"
         },
-        header: {text: "계정명"}
+        header: {text: "계정과목명"}
     }, {
-       fieldName: "referrence",
+        fieldName: "referrence",
         name: "referrence",
-        width: 200,
+        width: 180,
         header: {text: "참고"}
     }]);
 }
@@ -385,18 +486,316 @@ function setColumns(grid) {
 function setOptions(grid) {
     grid.setEditOptions({
         insertable: false,
-        appendable: false
+        appendable: false,
+        editable: false,
+        deletable: false,
+		updatable : false
     });
+    grid.setPanel({
+    	visible: false
+    })
+    grid.setFooter({
+    	visible: false
+    })
+    grid.setCheckBar({
+    	visible: false
+    })
+    grid.setStateBar({
+    	visible: false
+    })
+    grid.setIndicator({
+    	visible: false
+    })
+    var selectOptions = {"style" : "singleRow"};
+    grid.setSelectOptions(selectOptions);
 }
 
 function setRows(provider) {
-    var data = [{
-        code: "홍길동",
-        id: "(주)율도",
-        referrence: "gdhong@yuldo.com"
-    }];
+    var data = [
+	    {
+	        code1: "0101",
+	        id: "현금",
+	        referrence: ""
+	    },{
+	        code1: "0102",
+	        id: "당좌예금",
+	        referrence: ""
+	    },{
+	        code1: "0103",
+	        id: "보통예금",
+	        referrence: ""
+	    },{
+	        code1: "0104",
+	        id: "제예금",
+	        referrence: ""
+	    },{
+	        code1: "0105",
+	        id: "정기예금",
+	        referrence: ""
+	    },{
+	        code1: "0106",
+	        id: "정기적금",
+	        referrence: ""
+	    },{
+	        code1: "0107",
+	        id: "단기매매증권",
+	        referrence: ""
+	    },{
+	        code1: "0108",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0109",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0110",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0111",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0112",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0113",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0114",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0115",
+	        id: "외상매출금",
+	        referrence: ""
+	    },{
+	        code1: "0116",
+	        id: "외상매출금",
+	        referrence: ""
+	    }
+    ];
     provider.setRows(data);
 }
+
+//코드창 f2클릭시 이벤트
+function modal(){
 	
+	gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+		return false
+	}
 	
+	$(".modal-dialog").css("width","400px");
+	$("#modalTitle").text("계정코드도움");
 	
+	$("#addBtn").trigger("click");
+	
+	$('#addRowDialog').on('shown.bs.modal', function() {
+        gridViewPopup.resetSize();
+    });
+	  
+    RealGridJS.setTrace(false);
+    RealGridJS.setRootContext("/test/resources/js");
+    
+    dataProviderPopup = new RealGridJS.LocalDataProvider();
+    setFields(dataProviderPopup);
+    gridViewPopup = new RealGridJS.GridView("realgridPopup");
+    gridViewPopup.setDataSource(dataProviderPopup);   
+    setColumns(gridViewPopup);
+    setOptions(gridViewPopup);
+    setRows(dataProviderPopup);
+    
+    gridViewPopup.onDataCellDblClicked = function(grid, index){
+    	
+    	var current = gridViewPopup.getValues(gridViewPopup.getCurrent().itemIndex);
+    	var code = current.code1;
+    	var id = current.id;
+    	
+    	var dataRow = gridView.getCurrent().dataRow;
+    	var fieldIndex = gridView.getCurrent().fieldIndex;
+    	
+    	dataProvider.setValue(dataRow, fieldIndex, code)
+    	dataProvider.setValue(dataRow, fieldIndex+1, id)
+    	
+    	$("#addRowDialog").modal('hide');  
+    	$("#realgridPopup").empty();
+
+    	var index = {
+    		itemIndex : gridView.getCurrent().itemIndex,
+    		column : "col5",
+    		dataRow : gridView.getCurrent().dataRow,
+    		fieldName : "field5"
+    	}
+		gridView.setCurrent(index);
+    }
+    
+    
+    $("#dialog_btnClose").click(function(){
+    	$("#realgridPopup").empty(); 
+    })
+    
+    $(".close").click(function(){ 
+    	$("#realgridPopup").empty();
+    })
+    
+    $(document).keydown(function(e){
+    	if(e.keyCode == 27){
+    		 $("#addRowDialog").modal('hide');  
+    		 $("#realgridPopup").empty();
+    	}
+    })
+    
+}
+
+function setFields2(provider) {
+    provider.setFields([{
+        fieldName: "code2"
+    }, {
+        fieldName: "custId"
+    }, {
+        fieldName: "regNo"
+    }, {
+        fieldName: "repName"
+    }]);
+}
+
+function setColumns2(grid) {
+    grid.setColumns([{
+        fieldName: "code2",
+        name: "code2",
+        width: 50,
+        styles: {
+            textAlignment: "center"
+        },
+        header: {text: "코드"}
+    }, {
+        fieldName: "custId",  
+        name: "custId",
+        width: 180,  
+        styles: {
+            textAlignment: "center"
+        },
+        header: {text: "거래처명"}
+    }, {
+        fieldName: "regNo",
+        name: "regNo",
+        width: 120,
+        header: {text: "등록번호"}
+    }, {
+        fieldName: "repName",
+        name: "repName",
+        width: 120,
+        header: {text: "대표자명"}
+    }]);
+}
+
+function setOptions2(grid) {
+    grid.setEditOptions({
+        insertable: false,
+        appendable: false,
+        editable: false,
+        deletable: false,
+		updatable : false
+    });
+    grid.setPanel({
+    	visible: false
+    })
+    grid.setFooter({
+    	visible: false
+    })
+    grid.setCheckBar({
+    	visible: false
+    })
+    grid.setStateBar({
+    	visible: false
+    })
+    grid.setIndicator({
+    	visible: false
+    })
+    var selectOptions = {"style" : "singleRow"};
+    grid.setSelectOptions(selectOptions);
+}
+
+function setRows2(provider) {
+    var data = [
+	    {
+	    	code2: "01000",
+	    	custId: "거래처1",
+	    	regNo: "346-105-50154",
+	    	repName: "없음"
+	    }
+    ];
+    provider.setRows(data);
+}
+
+function modal2(){
+	
+	gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+		return false
+	}
+	
+	$(".modal-dialog").css("width","510px");
+	
+	$("#modalTitle").text("거래처도움");
+	
+	$("#addBtn").trigger("click");
+	
+	$('#addRowDialog').on('shown.bs.modal', function() {
+        gridViewPopup.resetSize();
+    });
+	  
+    RealGridJS.setTrace(false);
+    RealGridJS.setRootContext("/test/resources/js");
+    
+    dataProviderPopup = new RealGridJS.LocalDataProvider();
+    setFields2(dataProviderPopup);
+    gridViewPopup = new RealGridJS.GridView("realgridPopup");
+    gridViewPopup.setDataSource(dataProviderPopup);   
+    setColumns2(gridViewPopup);
+    setOptions2(gridViewPopup);
+    setRows2(dataProviderPopup);
+    
+    gridViewPopup.onDataCellDblClicked = function(grid, index){
+    	
+    	var current = gridViewPopup.getValues(gridViewPopup.getCurrent().itemIndex);
+    	var code = current.code2;
+    	var custId = current.custId;
+    	
+    	var dataRow = gridView.getCurrent().dataRow;
+    	var fieldIndex = gridView.getCurrent().fieldIndex;
+    	
+    	dataProvider.setValue(dataRow, fieldIndex, code)
+    	dataProvider.setValue(dataRow, fieldIndex+1, custId)
+    	
+    	$("#addRowDialog").modal('hide');  
+    	$("#realgridPopup").empty();
+
+    	var index = {
+    		itemIndex : gridView.getCurrent().itemIndex,
+    		column : "col6",
+    		dataRow : gridView.getCurrent().dataRow,
+    		fieldName : "field6"
+    	}
+		gridView.setCurrent(index);
+    }
+    
+    
+    $("#dialog_btnClose").click(function(){
+    	$("#realgridPopup").empty(); 
+    })
+    
+    $(".close").click(function(){ 
+    	$("#realgridPopup").empty();
+    })
+    
+    $(document).keydown(function(e){
+    	if(e.keyCode == 27){
+    		 $("#addRowDialog").modal('hide');  
+    		 $("#realgridPopup").empty();
+    	}
+    })
+    
+}

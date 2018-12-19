@@ -14,7 +14,7 @@ import com.my.test.model.Product;
 import com.my.test.service.ProductService;
 
 @Controller
-@RequestMapping(value="/")
+@RequestMapping(value="/testPage")
 public class TestController {
 
 	@Autowired
@@ -29,7 +29,7 @@ public class TestController {
 		return product;     
 	} 
 	
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/test0", method = RequestMethod.GET)
 	public String main() {
 		
 		return "test/test";

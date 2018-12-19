@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -43,20 +44,29 @@
 		color: white;
 	}
 	
-
 </style>
 <title>header</title>
 </head>
 <body>
 
 	<div id="header_wrapBox1">
+	
 		<div id="header_wrapBox2">
+			
 			<div id="header_logoBox">
 				<span id="header_logo" style="cursor: pointer;" onclick="location.href='main'">NewZen </span>
 				<span id="header_slash"> | </span>
 				<span id="header_name"> 게시판</span>
 			</div>
+			
+			<%String id = (String)session.getAttribute("userId");%>
+			<div style="color: white;float: right;">
+				<div>'<%=id%>'님 반갑습니다.</div>
+				<a id="logout" style="color: white;float: right;font-weight: bold" href="/jinWook3/logOut">로그아웃</a> 
+			</div>
+			
 		</div>
+		
 	</div>
 	
 	

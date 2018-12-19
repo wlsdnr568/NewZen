@@ -100,38 +100,38 @@
                     initContent: function () {
                         // initialize a jqxTree inside the Solution Explorer Panel
                         var source = [{
-                            icon: '/test/resources/jqwidgets/styles/images/earth.png',
+                            icon: '/jinWook3/resources/jqwidgets/styles/images/earth.png',
                             label: '프로젝트',
                             expanded: true,
                             items: [{
-                                icon: '/test/resources/jqwidgets/styles/images/folder.png',
+                                icon: '/jinWook3/resources/jqwidgets/styles/images/folder.png',
                                 label: 'css',
 //                                 expanded: true,
                                 items: [{
-                                    icon: '/test/resources/jqwidgets/styles/images/nav1.png',
+                                    icon: '/jinWook3/resources/jqwidgets/styles/images/nav1.png',
                                     label: 'jqx.base.css'
                                 }, {
-                                    icon: '/test/resources/jqwidgets/styles/images/nav1.png',
+                                    icon: '/jinWook3/resources/jqwidgets/styles/images/nav1.png',
                                     label: 'jqx.energyblue.css'
                                 }, {
-                                    icon: '/test/resources/jqwidgets/styles/images/nav1.png',
+                                    icon: '/jinWook3/resources/jqwidgets/styles/images/nav1.png',
                                     label: 'jqx.orange.css'
                                 }]
                             }, {
-                                icon: '/test/resources/jqwidgets/styles/images/folder.png',
+                                icon: '/jinWook3/resources/jqwidgets/styles/images/folder.png',
                                 label: 'scripts',
                                 items: [{
-                                    icon: '/test/resources/jqwidgets/styles/images/nav1.png',
+                                    icon: '/jinWook3/resources/jqwidgets/styles/images/nav1.png',
                                     label: 'jqxcore.js'
                                 }, {
-                                    icon: '/test/resources/jqwidgets/styles/images/nav1.png',
+                                    icon: '/jinWook3/resources/jqwidgets/styles/images/nav1.png',
                                     label: 'jqxdata.js'
                                 }, {
-                                    icon: '/test/resources/jqwidgets/styles/images/nav1.png',
+                                    icon: '/jinWook3/resources/jqwidgets/styles/images/nav1.png',
                                     label: 'jqxgrid.js'
                                 }]
                             }, {
-                                icon: '/test/resources/jqwidgets/styles/images/nav1.png',
+                                icon: '/jinWook3/resources/jqwidgets/styles/images/nav1.png',
                                 label: 'index.htm'
                             }]
                         }];

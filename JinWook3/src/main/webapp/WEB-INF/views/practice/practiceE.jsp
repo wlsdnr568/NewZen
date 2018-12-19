@@ -28,7 +28,7 @@ $(document).ready( function(){
     });
 
     RealGridJS.setTrace(false);
-    RealGridJS.setRootContext("/test/resources/js");
+    RealGridJS.setRootContext("/jinWook3/resources/js");
     
     dataProvider = new RealGridJS.LocalDataProvider();
 
@@ -112,8 +112,8 @@ $(document).ready( function(){
 			</div>
 		</div>
 	</div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practiceD">이전 페이지</a></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practiceF">다음 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practiceD">이전 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practiceF">다음 페이지</a></div>
 	
 </body>
 </html>

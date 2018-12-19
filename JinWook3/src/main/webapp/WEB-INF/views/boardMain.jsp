@@ -83,7 +83,7 @@
 	    	data["content"] = $("#editor").jqxEditor('val');
 	    	
 	    	$.ajax({
-	    		url : "/test/board/writeBoard",
+	    		url : "/jinWoo3/board/writeBoard",
 	    		type : "post",
 	    		data : data,
 	    		dataType : "json",  
@@ -124,6 +124,9 @@
 	 		<div id="cont_toolbar">
 	 			<ul>
 	 				<li><span onclick="addBoard()">글쓰기</span></li>
+	 				<c:if test="">
+	 					<li><span onclick="addBoard()">글쓰기</span></li>
+	 				</c:if>
 	 			</ul>
 	 		</div>
 	 		
@@ -189,7 +192,7 @@
 		 				<c:forEach items="${viewData.boardList}" var="board">
 		 					<tr id="row" style="border-bottom: 1px solid #e6e6e6;">
 		 						<td style="width: 70px;">${board.boardNo}</td>   
-		 						<td><a href="/test/board/boardView?boardNo=${board.boardNo}">${board.boardName}</a></td>
+		 						<td><a href="/jinWook3/board/boardView?boardNo=${board.boardNo}">${board.boardName}</a></td>
 		 						<td style="width: 70px;">${board.writer}</td>
 		 						<td>${board.writeDate}</td>
 		 						<td><input type="checkbox" id="checkRow" name="checkRow"></td>

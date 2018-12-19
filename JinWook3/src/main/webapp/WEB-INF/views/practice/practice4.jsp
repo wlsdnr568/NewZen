@@ -19,7 +19,7 @@
 	$(document).ready( function() {
 	
 	    RealGridJS.setTrace(false);
-	    RealGridJS.setRootContext("/script");
+	    RealGridJS.setRootContext("/jinWook3");
 	    
 	    dataProvider = new RealGridJS.LocalDataProvider();
 	    gridView = new RealGridJS.GridView("realgrid");
@@ -73,8 +73,8 @@
 </head>
 <body>
 	<div id="realgrid" style="width: 50%; height: 200px; border: 1px solid black; margin: 0 auto; margin-top: 200px"></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practice3">이전 페이지</a></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practice5">다음 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practice3">이전 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practice5">다음 페이지</a></div>
 </body>
 </html>
 

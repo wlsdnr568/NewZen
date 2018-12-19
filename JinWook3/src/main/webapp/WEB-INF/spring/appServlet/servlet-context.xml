@@ -9,8 +9,17 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
 
-	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
+	<!-- 인터셉터가 가로챌 요청을 명시: interceptors 태그 사용  -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/**"/>
+			<exclude-mapping path="/login"/>
+			<exclude-mapping path="/loginReq"/>
+			<exclude-mapping path="/"/>
+			<beans:ref bean="loginCheckIntercepter"/>
+		</interceptor>
+	</interceptors>
+
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 

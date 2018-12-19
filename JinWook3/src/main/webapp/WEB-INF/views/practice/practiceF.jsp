@@ -33,7 +33,7 @@
 	    });
 	
 	    RealGridJS.setTrace(false);
-	    RealGridJS.setRootContext("/test/resources/js");
+	    RealGridJS.setRootContext("/jinWook3/resources/js");
 	    
 	    dataProvider = new RealGridJS.LocalDataProvider();
 	    setFields(dataProvider);
@@ -130,7 +130,7 @@
 <body>
 
 	<div id="realgrid" style="width: 50%; height: 200px; border: 1px solid black; margin: 0 auto; margin-top: 200px"></div>
-	<button type="button" style="margin: 0 auto" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#addRowDialog">Add rows</button>
+	<button type="button" style="margin: 0 auto" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#addRowDialog">Add rows</button> 
   
 	<div class="modal fade" id="addRowDialog" role="dialog">
 		<div class="modal-dialog">
@@ -152,8 +152,8 @@
 			</div>
 		</div>
 	</div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practiceE">이전 페이지</a></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/main">처음으로</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practiceE">이전 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/main">처음으로</a></div>
 
 </body>
 </html>

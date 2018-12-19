@@ -19,7 +19,7 @@
 	$(document).ready( function() {
 	
 	    RealGridJS.setTrace(false);
-	    RealGridJS.setRootContext("/script");
+	    RealGridJS.setRootContext("/jinWook3");
 	    
 	    dataProvider = new RealGridJS.LocalDataProvider();
 	    gridView = new RealGridJS.GridView("realgrid");
@@ -122,8 +122,8 @@
 	
 	<button type="button" class="btn btn-primary btn-xs" id="btnPopupIndex2">4. ItemIdex와 RowId 다시 팝업하기</button>
 	<div id="realgrid" style="width: 50%; height: 200px; border: 1px solid black; margin: 0 auto; margin-top: 200px"></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practice7">이전 페이지</a></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practice9">다음 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practice7">이전 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practice9">다음 페이지</a></div>
 </body>
 </html>
 

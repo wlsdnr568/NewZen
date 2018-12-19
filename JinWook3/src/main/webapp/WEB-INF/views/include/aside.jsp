@@ -40,7 +40,7 @@
 <body>
 	<div id="aside_menuBox">
 		<ul id="aside_ul">
-			<li onclick="location.href='main'">일반 게시판</li>
+			<li onclick="location.href='boardMain'">일반 게시판</li>
 		</ul>
 	</div>
 </body>

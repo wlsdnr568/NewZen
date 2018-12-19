@@ -49,7 +49,7 @@
 					</tr>
 					<tr>
 						<td>
-							<button onclick="location.href='/test/board/deleteBoard?boardNo=${board.boardNo}'">삭제하기</button>
+							<button onclick="location.href='/jinWook3/board/deleteBoard?boardNo=${board.boardNo}'">삭제하기</button>
 						</td>
 					</tr>
 				</table>

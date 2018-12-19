@@ -44,8 +44,8 @@
 </head>
 <body>
 	<div id="realgrid" style="width: 50%; height: 200px; border: 1px solid black; margin: 0 auto; margin-top: 200px"></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/main">이전 페이지</a></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practice2">다음 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/main">이전 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practice2">다음 페이지</a></div>
 </body>
 </html>
 

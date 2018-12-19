@@ -14,7 +14,7 @@
 	    var dataProvider;
 	    
 	    function setupGridJs(id, width, height) {
-	    	RealGridJS.setRootContext("/test/resources/js");
+	    	RealGridJS.setRootContext("/jinWook3/resources/js");
 	        $("#"+id).css({ width : width, height : height });
 	        gridView = new RealGridJS.GridView(id);
 	        dataProvider = new RealGridJS.LocalDataProvider();
@@ -145,11 +145,11 @@
 
 	        var currState = dataProvider.getRowState(currRow);
 	        if (currState == "created") {
-	            saveData("/test/insertProducts");
+	            saveData("/jinWook3/insertProducts");
 	        }else if (currState == "updated") {   
-	        	saveData("/test/updateProducts");      
+	        	saveData("/jinWook3/updateProducts");      
 	        }else if (currState == "deleted") {
-	        	saveData("/test/deleteProducts");
+	        	saveData("/jinWook3/deleteProducts");
 	        }
 	    }
 	    
@@ -177,7 +177,7 @@
 	        $.ajax({
 	            type : "post",    
 	            dataType : "json",
-	            url : "/test/getProducts",     
+	            url : "/jinWook3/getProducts",     
 	            success : function(data){
 	                provider.fillJsonData(data);
 	            },          
@@ -345,16 +345,6 @@
 <title>Insert title here</title>
 </head>
 <body>	
-	
-	<div id="mySidebar" class="sidebar">
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-	  <a href="/test/test1">test1</a>
-	  <a href="/test/test2">test2</a>
-	  <a href="/test/test3">test3</a>
-	  <a href="/test/test4">test4</a>
-	  <a href="/test/test5">test5</a>
-	  <a href="/test/test6">test6</a>
-	</div>
 	
 	<div id="main">
 	  <button class="openbtn" onclick="openNav()">☰ 페이지</button>  

@@ -20,7 +20,7 @@ public class BoardController {
 	@Autowired
 	private BoardService boardService;
 	
-	@RequestMapping(value="/main",method=RequestMethod.GET)
+	@RequestMapping(value="/boardMain",method=RequestMethod.GET)
 	public String boardMain(Model model
 			,@RequestParam(required = false)String keyword
 			,@RequestParam(defaultValue = "0")int type
@@ -36,7 +36,7 @@ public class BoardController {
 		
 		model.addAttribute("viewData", viewData);
 		
-		return "boardMain";    
+		return "boardMain";        
 	}
 	
 	@ResponseBody

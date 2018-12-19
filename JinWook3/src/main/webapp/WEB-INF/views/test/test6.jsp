@@ -42,7 +42,7 @@
 	var dataProvider;
 
 	function setupGridJs(id, width, height) {
-		RealGridJS.setRootContext("/test/resources/js");
+		RealGridJS.setRootContext("/jinWook3/resources/js");
 		$("#" + id).css({
 			width : width,
 			height : height
@@ -189,17 +189,17 @@
 
 		var currState = dataProvider.getRowState(currRow);
 		if (currState == "created") {
-			saveData("/test/insertProducts");
+			saveData("/jinWook3/insertProducts");
 		} else if (currState == "updated") {
-			saveData("/test/updateProducts");
+			saveData("/jinWook3/updateProducts");
 		} else if (currState == "deleted") {
-			saveData("/test/deleteProducts");
+			saveData("/jinWook3/deleteProducts");
 		}
 	}
 
 	function btnSaveAllDataClickHandler(e) {
 		gridView.commit();
-		saveDataAll("/test/allSaveProducts");
+		saveDataAll("/jinWook3/allSaveProducts");
 	}
 
 	//////////////////////////////////////////////////////////////////////////////////////

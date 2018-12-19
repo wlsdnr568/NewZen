@@ -324,16 +324,6 @@
 </head>
 <body>
 
-	<div id="mySidebar" class="sidebar">
-	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-	  <a href="/test/test1">test1</a>
-	  <a href="/test/test2">test2</a>
-	  <a href="/test/test3">test3</a>
-	  <a href="/test/test4">test4</a>
-	  <a href="/test/test5">test5</a>
-	  <a href="/test/test6">test6</a>
-	</div>
-	
 	<div id="main">
 	  <button class="openbtn" onclick="openNav()">☰ 페이지</button>  
 	</div>

@@ -20,7 +20,7 @@
 		$(document).ready(function() {
 
 			RealGridJS.setTrace(false);
-			RealGridJS.setRootContext("/script");
+			RealGridJS.setRootContext("/jinWook3");
 
 			dataProvider = new RealGridJS.LocalDataProvider();
 			gridView = new RealGridJS.GridView("realgrid");
@@ -79,8 +79,8 @@
 <body>
 	<button type="button" class="btn btn-primary btn-xs" id="btnPopupRowId">포커스셀 RowId 팝업하기</button> 버튼을 클릭하여 현재 포커스된 셀의 RowId가 팝업되는 것을 확인하세요.
 	<div id="realgrid" style="width: 50%; height: 200px; border: 1px solid black; margin: 0 auto; margin-top: 200px"></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practice5">이전 페이지</a></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practice7">다음 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practice5">이전 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practice7">다음 페이지</a></div>
 </body>
 </html>
 

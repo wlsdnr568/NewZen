@@ -20,7 +20,7 @@ var dataProvider;
 $(document).ready( function() {
 
     RealGridJS.setTrace(false);
-    RealGridJS.setRootContext("/script");
+    RealGridJS.setRootContext("/jinWook3");
     
     dataProvider = new RealGridJS.LocalDataProvider();
     gridView = new RealGridJS.GridView("realgrid");
@@ -100,8 +100,8 @@ $(document).ready( function() {
 	<button type="button" class="btn btn-primary btn-xs" id="btnResetOrder">정렬상태 초기화</button>
 	<button type="button" class="btn btn-primary btn-xs" id="btnChangeOrders">국어, 수학 컬럼 순방향 정렬</button>
 	<div id="realgrid" style="width: 50%; height: 200px; border: 1px solid black; margin: 0 auto; margin-top: 200px"></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practiceB">이전 페이지</a></div>
-	<div style="width:10%; margin: 0 auto"><a href="/test/practice/practiceD">다음 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practiceB">이전 페이지</a></div>
+	<div style="width:10%; margin: 0 auto"><a href="/jinWook3/practice/practiceD">다음 페이지</a></div>
 </body>
 </html>
 

@@ -40,7 +40,8 @@
 <body>
 	<div id="aside_menuBox">
 		<ul id="aside_ul">
-			<li onclick="location.href='boardMain'">일반 게시판</li>
+			<li onclick="location.href='/jinWook3/board/boardMain'">일반 게시판</li>
+			<li onclick="location.href='/jinWook3/practice/practiceG'">전표 입력</li>
 		</ul>
 	</div>
 </body>

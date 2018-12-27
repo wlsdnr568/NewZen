@@ -9,15 +9,15 @@
 	#header_wrapBox1{
 		width: 100%;
 		height: 60px;     
-		border: 1px solid #4092d7;
-		background-color: #4092d7;
+		border: 1px solid #2f7bc9;
+		background-color: #2f7bc9;
 	}
 	
 	#header_wrapBox2{
 		width: 1440px; 
 		height: 59px;     
-		border: 1px solid #4092d7;
-		background-color: #4092d7;
+		border: 1px solid #2f7bc9;
+		background-color: #2f7bc9;
 		margin: auto;
 	}
 	

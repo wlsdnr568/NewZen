@@ -5,7 +5,7 @@ $(function() {
 			changeMonth : true,
 			changeYear : false,   
 			showOn : "button",
-			buttonImage : "/test/resources/img/calendar.gif",
+			buttonImage : "/jinWook3/resources/img/calendar.gif",
 			buttonImageOnly : true,
 			buttonText : "Select date", 
 			dateFormat : "yy년 mm월 dd일"
@@ -21,7 +21,7 @@ $(function() {
 				changeMonth : true,
 				changeYear : false,   
 				showOn : "button",
-				buttonImage : "/test/resources/img/calendar.gif",
+				buttonImage : "/jinWook3/resources/img/calendar.gif",
 				buttonImageOnly : true,
 				buttonText : "Select date", 
 				dateFormat : "yy년 mm월"
@@ -31,15 +31,15 @@ $(function() {
 				changeMonth : true,
 				changeYear : false,   
 				showOn : "button",
-				buttonImage : "/test/resources/img/calendar.gif",
+				buttonImage : "/jinWook3/resources/img/calendar.gif",
 				buttonImageOnly : true,
 				buttonText : "Select date", 
 				dateFormat : "yy년 mm월"
 			});
 			
 			$("<input type='button' value='변경' id='change1' style='margin-left: 5px'>").appendTo($("#box"));
-			$("<label for='exchage1' style='margin-left:5px'>현금잔액:</label>"+"<input type='text' readonly='readonly' id='exchange1'>").appendTo($("#box"));
-			$("<label for='asd1' style='margin-left:5px'>대차차액:</label>"+"<input type='text' readonly='readonly' id='asd1'>").appendTo($("#box"));
+			$("<label for='exchage1' style='margin-left:5px;'>현금잔액:</label>"+"<input type='text' readonly='readonly' id='exchange1'>").appendTo($("#box"));
+			$("<label for='asd1' style='margin-left:5px;'>대차차액:</label>"+"<input type='text' readonly='readonly' id='asd1'>").appendTo($("#box"));
 			
 			var column1 = {
 					"name": "col0",
@@ -51,7 +51,7 @@ $(function() {
 			}
 			
 			gridView.addColumn(column1,"",0);
-			
+			 
 			$("#change1").on("click",function(){
 				window.location.reload();
 			});

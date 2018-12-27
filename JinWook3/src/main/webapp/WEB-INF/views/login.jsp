@@ -73,7 +73,11 @@
 			<input type="checkbox" id="checkBox">
 			<label for="checkBox" style="font-size: 12px">아이디 저장</label><br>
 			<label for="userPw">비밀번호:</label><input type="password" id="userPw" name="userPw"><br>
-			<input type="submit" class="submit" value="로그인" style="background-color: white;border: 1px solid black;cursor: pointer;">  
+			
+			<div style="margin-top: 5px"> 
+				<input type="submit" value="로그인" style="background-color: white;border: 1px solid black;cursor: pointer;">
+			</div>
+			  
 		</fieldset>
 	</form>
 	${msg}

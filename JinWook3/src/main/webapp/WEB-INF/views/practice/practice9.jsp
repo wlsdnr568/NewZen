@@ -38,7 +38,8 @@
 	            fieldName: "field1"
 	        },
 	        {
-	            fieldName: "field2"
+	            fieldName: "field2",
+	            dataType: "number"
 	        },
 	        {
 	            fieldName: "field3"
@@ -62,6 +63,9 @@
 	            fieldName: "field2",
 	            header : {
 	                text: "국어"
+	            },
+	            styles:{
+	            	numberFormat: "#,##0"  
 	            },
 	            width: 150
 	        },

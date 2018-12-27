@@ -10,8 +10,8 @@
 <script type="text/javascript" src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
 
 <script type="text/javascript" src="<c:url value="/resources/js/realgridjs-lic.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/resources/js/realgridjs_eval.1.1.30.min.js"/>"></script>
-	<script type="text/javascript" src="<c:url value="/resources/js/realgridjs-api.1.1.30.js" />"></script>
+<script type="text/javascript" src="<c:url value="/resources/js/realgridjs_eval.1.1.30.min.js"/>"></script>
+<script type="text/javascript" src="<c:url value="/resources/js/realgridjs-api.1.1.30.js" />"></script>
 
 <script>
 var gridView;

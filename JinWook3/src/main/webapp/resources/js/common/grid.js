@@ -6,7 +6,7 @@ var dataProviderPopup;
 $(function() {
 	
 	RealGridJS.setTrace(false);  
-	RealGridJS.setRootContext("/test/resources/js");
+	RealGridJS.setRootContext("/jinWook3/resources/js");
 
 	dataProvider = new RealGridJS.LocalDataProvider();
 	gridView = new RealGridJS.GridView("realgrid");
@@ -24,21 +24,23 @@ $(function() {
 	}, {
 		fieldName : "field4"
 	}, {
-		fieldName : "field4a"
-	}, {
 		fieldName : "field5"
 	}, {
-		fieldName : "field5a"
-	}, {
 		fieldName : "field6"
-	},{
-		fieldName : "field6a"
 	}, {
 		fieldName : "field7"
 	}, {
 		fieldName : "field8"
 	}, {
 		fieldName : "field9"
+	}, {
+		fieldName : "field10",
+		dataType : "number"
+	}, {
+		fieldName : "field11",
+		dataType : "number"
+	}, {
+		fieldName : "field12"
 	} ];
 
 	dataProvider.setFields(fields);
@@ -54,6 +56,9 @@ $(function() {
 		width : 30,
 		styles : {
 			textAlignment : "center"
+		},
+		editor: {
+			type : "number"
 		}
 	}, {
 		name : "col2",
@@ -66,6 +71,9 @@ $(function() {
 		editable : false,
 		styles : {
 			textAlignment : "center"
+		},
+		editor: {
+			type : "number"
 		}
 		
 	}, {
@@ -91,10 +99,13 @@ $(function() {
 					text : "코드"
 				},
 				width : 55,
-				textAlignment : "center"
+				textAlignment : "center",
+				editor: {
+					type : "number"
+				}
 			}, { 
 				name : "col4",
-				fieldName : "field4a",
+				fieldName : "field5",
 				header : {
 					text : "계정과목명"
 				},  
@@ -115,15 +126,18 @@ $(function() {
 		"columns" : [ 
 			{
 				name : "col5",
-				fieldName : "field5",
+				fieldName : "field6",
 				header : {
 					text : "코드"
 				},
 				width : 55,
-				textAlignment : "center"
+				textAlignment : "center",
+				editor: {
+					type : "number"
+				}
 			}, {
 				name : "col5",
-				fieldName : "field5a",
+				fieldName : "field7",
 				header : {
 					text : "거래처명"
 				},
@@ -144,14 +158,17 @@ $(function() {
 		"columns" : [
 			{
 				name : "col6",
-				fieldName : "field6",
+				fieldName : "field8",
 				header : {
 					text : "코드"
 				},
-				width: 55
+				width: 55,
+				editor: {
+					type : "number"
+				}
 			},{
 				name : "col6",
-				fieldName : "field6a",
+				fieldName : "field9",
 				header : {
 					text : "적요명"
 				},
@@ -165,23 +182,34 @@ $(function() {
 	
 	}, {
 		name : "col7",
-		fieldName : "field7",
+		fieldName : "field10",
 		header : {
 			text : "차변"
 		},
 		width : 100,
-		textAlignment : "center"
+		styles : {
+			numberFormat: "#,##0"
+		},
+		editor: {
+			type : "number"
+		}
 	}, {
-		name : "col8",
-		fieldName : "field8",
+		name : "col8", 
+		fieldName : "field11",
 		header : {
 			text : "대변"
 		},
 		width : 100,
-		textAlignment : "center"
+		styles : {
+			numberFormat : "#,##0" 
+		},
+		editor: {
+			type : "number"
+		}
+	
 	}, {
 		name : "col9",
-		fieldName : "field9",
+		fieldName : "field12",
 		header : {
 			text : "휴일"
 		},
@@ -216,7 +244,7 @@ $(function() {
 			deletable : true,
 			deleteRowsConfirm : true,
 			deleteRowsMessage : "삭제하시겠습니까 ?",
-			skipReadOnly : true 
+			skipReadOnly : true
 		},
 		displayOptions : {
 			columnWidth : 200
@@ -304,9 +332,6 @@ $(function() {
 			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
 				if(key == 113){
 					modal();
-					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
-						return true
-					}
 				}
 			}
 		}else if(index.fieldIndex == "6"){
@@ -314,9 +339,6 @@ $(function() {
 			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
 				if(key == 113){
 					modal2();
-					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
-						return true
-					}
 				}
 			}
 		}else if(index.fieldIndex == "8"){
@@ -389,22 +411,17 @@ $(function() {
 			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
 				if(key == 113){
 					modal();
-					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
-						return true;
-					}
-				}
-			}
+				};
+			};
 			
 		}else if(newIndex.fieldIndex == "6"){
 			$("#helpBox").text("거래처코드를 입력하세요. 기능키F2-도움창, '+' 또는 '00000'치고  명입력시 자동검색 또는 신규입력");
 			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
 				if(key == 113){
 					modal2();
-					gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
-						return true;
-					}
-				}
-			}
+				};
+			};
+			
 		}else if(newIndex.fieldIndex == "8"){
 			$("#helpBox").text("적요코드를 입력하세요. 기능키F2-도움창, 등록적요 수정은 기능키-F8입니다.");
 			$("#subBox").css("display","block");
@@ -412,24 +429,27 @@ $(function() {
 			gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
 				
 				if(key == 37 || key == 39){
-					$("#subBox").css("display","none");
+					$("#subBox").css("display","none"); 
 				}
 				
 				if(key == 13 || key == 9){
 					
 					gridView.onGetEditValue = function (grid, index, editResult){
 						
-						gridView.commit(false);
+						gridView.commit(true);
 						
 						if (index.column == "col6"){
 							
 							var editvalue = editResult.value;
 							var fieldIndex = gridView.getCurrent().fieldIndex;
 							var dataRow = gridView.getCurrent().dataRow;
+							$("#subBox").css("display","none");
 							
 							if(editvalue == "1"){
+								dataProvider.setValue(dataRow, fieldIndex, "1")
 								dataProvider.setValue(dataRow, fieldIndex+1, "당좌예금 현금입금")
 							}else if(editvalue == "2"){
+								dataProvider.setValue(dataRow, fieldIndex, "2")
 								dataProvider.setValue(dataRow, fieldIndex+1, "당좌예금 현금인출")
 							}
 							  
@@ -584,21 +604,20 @@ function setRows(provider) {
 //코드창 f2클릭시 이벤트
 function modal(){
 	
-	gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
-		return false
-	}
-	
 	$(".modal-dialog").css("width","400px");
 	$("#modalTitle").text("계정코드도움");
 	
 	$("#addBtn").trigger("click");
 	
-	$('#addRowDialog').on('shown.bs.modal', function() {
+	$('#addRowDialog').on('shown.bs.modal', function() { 
         gridViewPopup.resetSize();
+        gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+    		return false; 
+    	}
     });
 	  
     RealGridJS.setTrace(false);
-    RealGridJS.setRootContext("/test/resources/js");
+    RealGridJS.setRootContext("/jinWook3/resources/js");
     
     dataProviderPopup = new RealGridJS.LocalDataProvider();
     setFields(dataProviderPopup);
@@ -733,10 +752,6 @@ function setRows2(provider) {
 
 function modal2(){
 	
-	gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
-		return false
-	}
-	
 	$(".modal-dialog").css("width","510px");
 	
 	$("#modalTitle").text("거래처도움");
@@ -745,10 +760,13 @@ function modal2(){
 	
 	$('#addRowDialog').on('shown.bs.modal', function() {
         gridViewPopup.resetSize();
+        gridView.onKeyDown = function (grid, key, ctrl, shift, alt) {
+    		return false
+    	}
     });
 	  
     RealGridJS.setTrace(false);
-    RealGridJS.setRootContext("/test/resources/js");
+    RealGridJS.setRootContext("/jinWook3/resources/js");
     
     dataProviderPopup = new RealGridJS.LocalDataProvider();
     setFields2(dataProviderPopup);

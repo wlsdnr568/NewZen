@@ -12,9 +12,6 @@ import com.my.test.service.ProductService;
 @RequestMapping(value="/practice")
 public class PracticeController {
 	
-	@Autowired
-	private ProductService proService;
-	
 	@RequestMapping(value = "/main", method = RequestMethod.GET)
 	public String practice() {
 		
@@ -114,9 +111,20 @@ public class PracticeController {
 	@RequestMapping(value = "/practiceG", method = RequestMethod.GET)
 	public String practiceG() {
 		
-		return "practice/practiceG";
+		return "practice/practiceH";  
 	}
 	
+	@RequestMapping(value = "/practiceI", method = RequestMethod.GET)
+	public String practiceI() {
+		
+		return "practice/practiceI";  
+	}
+	
+	@RequestMapping(value = "/practiceJ", method = RequestMethod.GET)
+	public String practiceJ() {
+		
+		return "practice/practiceJ";  
+	}
 }
 
 

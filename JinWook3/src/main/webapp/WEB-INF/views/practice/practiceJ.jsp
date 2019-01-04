@@ -20,9 +20,9 @@
 </head>
 <body>
 
-	<div id="realgrid_Main" style="width: 70%; height: 500px; border: 1px solid gray; margin: 0 auto; margin-top: 20px"></div>
-	<div id="realgrid_Sub" style="width: 70%; height: 200px; border: 1px solid gray; margin: 0 auto; margin-top: 20px"></div>
+	<div id="realgrid_Main" style="width: 60%; height: 500px; border: 1px solid gray; margin: 0 auto; margin-top: 20px"></div>
+	<div id="realgrid_Sub" style="width: 60%; height: 200px; border: 1px solid gray; margin: 0 auto; margin-top: 20px"></div>
 
 </body>
 </html>
-
+ 

@@ -104,7 +104,7 @@ $(function() {
 					type : "number"
 				}
 			}, { 
-				name : "col4",
+				name : "col5",
 				fieldName : "field5",
 				header : {
 					text : "계정과목명"
@@ -125,7 +125,7 @@ $(function() {
 		"width" : 200,
 		"columns" : [ 
 			{
-				name : "col5",
+				name : "col6",
 				fieldName : "field6",
 				header : {
 					text : "코드"
@@ -136,7 +136,7 @@ $(function() {
 					type : "number"
 				}
 			}, {
-				name : "col5",
+				name : "col7",
 				fieldName : "field7",
 				header : {
 					text : "거래처명"
@@ -157,7 +157,7 @@ $(function() {
 		"width" : 200,
 		"columns" : [
 			{
-				name : "col6",
+				name : "col8",
 				fieldName : "field8",
 				header : {
 					text : "코드"
@@ -167,7 +167,7 @@ $(function() {
 					type : "number"
 				}
 			},{
-				name : "col6",
+				name : "col9",
 				fieldName : "field9",
 				header : {
 					text : "적요명"
@@ -181,7 +181,7 @@ $(function() {
 		"textAlignment" : "center" 
 	
 	}, {
-		name : "col7",
+		name : "col10",
 		fieldName : "field10",
 		header : {
 			text : "차변"
@@ -194,7 +194,7 @@ $(function() {
 			type : "number"
 		}
 	}, {
-		name : "col8", 
+		name : "col11", 
 		fieldName : "field11",
 		header : {
 			text : "대변"
@@ -208,12 +208,12 @@ $(function() {
 		}
 	
 	}, {
-		name : "col9",
+		name : "col12",
 		fieldName : "field12",
 		header : {
 			text : "휴일"
 		},
-		width : 50,
+		width : 40, 
 		readOnly : "true",
 		textAlignment : "center"
 	} ]
@@ -438,7 +438,7 @@ $(function() {
 						
 						gridView.commit(true);
 						
-						if (index.column == "col6"){
+						if (index.column == "col8"){
 							
 							var editvalue = editResult.value;
 							var fieldIndex = gridView.getCurrent().fieldIndex;
@@ -644,11 +644,12 @@ function modal(){
 
     	var index = {
     		itemIndex : gridView.getCurrent().itemIndex,
-    		column : "col5",
+    		column : "col6",
     		dataRow : gridView.getCurrent().dataRow,
-    		fieldName : "field5"
+    		fieldName : "field6"
     	}
 		gridView.setCurrent(index);
+    	gridView.setFocus();
     }
     
     
@@ -742,9 +743,29 @@ function setRows2(provider) {
     var data = [
 	    {
 	    	code2: "01000",
+	    	custId: "거래처",
+	    	regNo: "146-105-50154",
+	    	repName: "김둘리"
+	    },{
+	    	code2: "01001",
 	    	custId: "거래처1",
+	    	regNo: "246-105-50154",
+	    	repName: "벅듈라"
+	    },{
+	    	code2: "01002",
+	    	custId: "거래처2",
 	    	regNo: "346-105-50154",
-	    	repName: "없음"
+	    	repName: "오둘리"
+	    },{
+	    	code2: "01003",
+	    	custId: "거래처3",
+	    	regNo: "446-105-50154",
+	    	repName: "이둘리"
+	    },{
+	    	code2: "01004",
+	    	custId: "거래처4",
+	    	regNo: "546-105-50154",
+	    	repName: "소둘리"
 	    }
     ];
     provider.setRows(data);
@@ -793,11 +814,12 @@ function modal2(){
 
     	var index = {
     		itemIndex : gridView.getCurrent().itemIndex,
-    		column : "col6",
+    		column : "col8",
     		dataRow : gridView.getCurrent().dataRow,
-    		fieldName : "field6"
+    		fieldName : "field8"
     	}
 		gridView.setCurrent(index);
+    	gridView.setFocus();
     }
     
     

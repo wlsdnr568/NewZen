@@ -187,7 +187,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<div id='sampleForm1' style="width: 420px; height: auto;"></div>   
+	<div id='sampleForm1' style="width: 420px;height: auto"></div>   
 </body>
 </html>
 

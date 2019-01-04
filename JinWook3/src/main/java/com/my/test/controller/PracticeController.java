@@ -1,12 +1,11 @@
 package com.my.test.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.my.test.service.ProductService;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping(value="/practice")
@@ -125,6 +124,38 @@ public class PracticeController {
 		
 		return "practice/practiceJ";  
 	}
+	
+	@RequestMapping(value = "/practiceK", method = RequestMethod.GET)
+	public String practiceK() {
+		
+		return "practice/practiceK";  
+	}
+	
+	@RequestMapping(value = "/practiceL", method = RequestMethod.GET)
+	public String practiceL() {
+		
+		return "practice/practiceL";  
+	}
+	
+	@RequestMapping(value = "/mainTest", method = RequestMethod.GET)
+	public String mainTest() {
+		
+		return "main";  
+	}
+	
+	@RequestMapping(value="/loadMenuListByModule", method = RequestMethod.POST)
+	public String loadMenuListByModule(@RequestParam(value="module") String module) {
+		return "include/header/menu_list_" + module;
+	}	
+	
+	@RequestMapping(value="/ACC00000", method={RequestMethod.GET, RequestMethod.POST})
+	public String goACC02030(Map<String, Object> model){
+		
+		return "acc00000";
+	}
+	
+	
+	
 }
 
 

@@ -1,0 +1,121 @@
+body {
+    font-family:����, Dotum;
+	font-size:12px;
+}
+#appr_org{
+	width:607px;
+	height:593px;
+	/* background-image:url(../img/modal/appointed_bg.png); */ 
+	/* background-repeat:no-repeat; */
+}
+#appr_title{
+	width:80px;
+	height:21px;
+	font-weight:bold;
+	color:#ffffff;
+	padding:12px 0px 0px 13px;
+}
+#appr_search{
+	width:607px;
+	height:22px;	
+}
+.appr_box{
+	width:200px;
+	height:22px;
+	float:left;
+	padding:9px 0px 8px 13px;
+}
+.appr_input{
+	width:203px;
+	height:19px;
+	border:#b9b9b9 1px solid;
+	font-family:����;
+	font-size:12px;
+	color:#000000	
+}
+.appr_btns_search{
+	width:54px;
+	height:22px;
+	float:left;
+	padding:9px 0px 8px 13px;
+}
+#appr_org_form{
+	width:607px;
+	height:473px;
+	margin:auto;
+	padding:0;
+	float:left;
+}
+#appr_orz{
+	width:264px;
+	height:473px;
+	padding:2px 0px 0px 13px;
+	float:left;
+}
+#appr_btns_box{
+	width:35px;
+	height:473px;
+	padding:2px 0px 0px 13px;
+	float:left;
+}
+.appr_btns_right{
+	padding:128px 0px 0px 0px;
+}
+.appr_btns_left{
+	padding:9px 0px 0px 0px;
+}
+.appr_btns_right_up{
+	padding:185px 0px 0px 0px;
+}
+#appr_user{
+	width:232px; 
+	height:473px;
+	padding:2px 0px 0px 0px;
+	float:left;
+}
+.appr_user_table{
+	float:left;
+	padding:11px 0px 0px 0px;
+}
+#appr_btns_right_box{
+	width:48px;
+	height:473px;
+	padding:2px 0px 0px 0px;
+	float:right;
+}
+.appr_btns_arrow{
+	padding:128px 0px 0px 11px;
+}
+.appr_btns_down{
+	padding:9px 0px 0px 11px;
+}
+.appr_btns_etc{
+	width:607px;
+	height:47px;
+	float:right;
+}
+.appr_btns_etc_box{
+	list-style:none;
+	margin:0; 
+	float:right; 
+	padding:2px 46px 0px 0px;
+}
+.appr_btns_lately{
+	width:75px;
+	padding:10px 4px 0px 368px;
+	float:left;
+}
+.appr_btns_confirm{
+	width:51px;
+	padding:10px 4px 0px 2px;
+	float:left;
+}
+.appr_btns_close{
+	width:97px;
+	padding:10px 4px 0px 0px;
+	float:right;
+}
+
+
+
+

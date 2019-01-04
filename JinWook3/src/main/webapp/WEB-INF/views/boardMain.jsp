@@ -113,11 +113,11 @@
 
 	<div id="mask"></div>
 <!-- 	 헤더 -->
-	 <%@ include file="/WEB-INF/views/include/header.jsp" %>
+	 <%@ include file="/WEB-INF/views/include1/header.jsp" %>
 <!-- 	 내용 -->
 	 <div id="cont">
 <!-- 	 	내용 -> 메뉴 -->
-	 	<%@ include file="/WEB-INF/views/include/aside.jsp" %>
+	 	<%@ include file="/WEB-INF/views/include1/aside.jsp" %>
 <!-- 	 	내용 -> 메인 화면 -->
 	 	<div id="cont_right"> 
 <!-- 	 		내용 -> 메인 화면 -> 메뉴바 -->

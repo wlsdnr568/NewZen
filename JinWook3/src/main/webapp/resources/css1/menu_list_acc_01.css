@@ -1,0 +1,80 @@
+ul.tab_time{margin:0;padding-top:5px;padding-left:18px;float:left;list-style:none;width:100%;height:26px}
+ul.tab_time li{float:left;margin:0;width:123px;height:22px;line-height:25px;border-left:1px solid #8099b1;border-right:1px solid #8099b1;border-top: 1px solid #8099b1;margin-left:1px;background:#d1e5fa;overflow:hidden;position:relative}
+ul.tab_time li a {text-decoration:underline;color:#626b71;display:block;font-size:12px;padding-left:19px;cursor:pointer}
+ul.tab_time li a:hover {color:#000000}
+ul.tab_time li.active,
+ul.tab_time li.active a:hover{color:#000000}       
+.tab_container{clear:both;float:left;width:100%;background:#ffffff}
+a{text-decoration:none;font-family:굴림체;font-size:12px;color:#626b71}	
+a:hover{color:#000000;text-decoration:underline}
+#tabmenu{width:982px;height:29px;background-color:#d1e5fa}
+#tab_chit{width:900px;height:296px;margin-left:20px;margin-top:4px;position:relative;display:inline;float:left}
+#tab_line{width:3px;height:296px;float:left}
+#tab_line_a{width:3px;height:296px;float:left;padding-left:240px}
+.tab_title{width:90px;font-family:굴림;font-size:12px;color:#2f7bc9;font-weight:bold;padding:5px 0px 0px 15px}
+.tab_map{width:300px;padding-left:3px;padding:10px 0px 0px 15px;cursor:pointer}
+.tab_pay{width:100px;padding:6px 0px 0px 15px}
+.tab_task{width:150px;padding:6px 0px 0px 15px}
+#tab_line_b{width:3px;height:296px;float:left;padding-left:260px}
+#tab_line_c{width:3px;height:296px;float:left;padding-left:250px}
+#tab_etc{width:900px;height:296px;margin-left:20px;margin-top:30px;position:relative;display:inline;float:left}
+#tab_laine_a{width:3px;height:296px;float:left}
+.tab_revenue{width:170px;padding:6px 0px 0px 15px}
+.tab_send{width:200px;padding: 6px 0px 0px 15px}
+#tab_line_d{width:3px;height:296px;float:left;padding-left:240px}
+.tab_fix{width:130px;font-family:굴림;font-size:12px;color:#2f7bc9;padding:10px 0px 0px 15px}
+.btn_finance{width:130px;font-family:굴림;font-size:12px;color:#2f7bc9;font-weight:bold;padding:5px 0px 0px 15px}
+body li{font-family:굴림;font-size:12px;list-style:none;margin-bottom:0px;margin-top:0px;margin-left:0px;margin-right:0px} 		
+ul.tab_time li a{text-decoration:none;color:#4d4d4d;display:block}
+ul.tab_time li a:hover{background:#ffffff}
+html ul.tab_time li.active,
+html ul.tab_time li.active a:hover{background:#ffffff}
+
+#mapTab{width:964px;height:27px;background-color:#d1e5fa}
+#inchit{width:900px;height:296px;margin-left:17px;margin-top:13px;position:relative;display:inline;float:left}
+.list_menu{width:3px;height:296px;float:left}
+.com_title{width:90px;font-family:굴림;font-size:12px;color:#2f7bc9;font-weight:bold;padding:5px 0px 0px 8px}
+.menu_normal{width:300px;padding-left:3px;padding:10px 0px 0px 8px;cursor:pointer}
+.menu_purchase{width:100px;padding:6px 0px 0px 8px}
+.menu_task{width:150px;padding:6px 0px 0px 8px}
+#cogchit{width:3px;height:296px;float:left;padding-left:234px}
+#comsettlement{width:3px;height:296px;float:left;padding-left:233px}
+#tbletc{width:900px;height:296px;margin-left:17px;margin-top:15px;position:relative;display:inline;float:left}
+.menu_tax{width:170px;padding:6px 0px 0px 8px}
+.menu_product{width:200px;padding:6px 0px 0px 8px}
+.bot_tlt{width:90px;font-family:굴림;font-size:12px;color:#2f7bc9;font-weight:bold;padding:5px 0px 0px 8px}
+.bot_amortization{width:130px;font-family:굴림;font-size:12px;color:#2f7bc9;font-weight:bold;padding:5px 0px 0px 8px}
+.menu_assets{width:300px;padding-left:3px;padding:10px 0px 0px 8px}
+
+#list_funds{margin-left:17px;margin-top:13px;position:relative;display:inline;float:left}
+.menu_leader{width:100px;padding-left:3px;padding:10px 0px 0px 8px;cursor:pointer}
+.menu_project{width:200px;padding:6px 0px 0px 8px}
+
+#projectTab{margin-left:235px;margin-top:0px;position:absolute;display:inline;float:left}
+.menu_won{width:300px;padding-left:3px;padding:10px 0px 0px 8px}
+#statusTab{margin-left:472px;margin-top:0px;position:absolute;display:inline;float:left}
+#budgetTab{margin-left:707px;margin-top:0px;position:absolute;display:inline;float:left}
+
+#wonTab{position:absolute;padding-top:311px}
+.menu_term{width:120px;font-family:굴림;font-size:12px;color:#2f7bc9;font-weight:bold;padding:5px 0px 0px 8px}
+
+#foreignTab{position:absolute;padding-top:311px;margin-left:238px}
+
+#operationTab{position:absolute;padding-top:311px;margin-left:475px}
+.menu_revenue{width:300px;padding-left:3px;padding:6px 0px 0px 8px}
+
+#earlyTab{position:absolute;padding-top:311px;margin-left:710px;}
+.menu_best{width:200px;padding-left:3px;padding:10px 0px 0px 8px;cursor:pointer}
+
+#financeTab{margin-left:235px;margin-top:0px;position:absolute;display:inline;float:left}
+.menu_value{width:180px;padding:6px 0px 0px 8px}
+
+#cardTab{margin-left:472px;margin-top:0px;position:absolute;display:inline;float:left}
+#octTab{margin-left:707px;margin-top:0px;position:absolute;display:inline;float:left}
+
+#ibkTab{position:absolute; padding-top:311px}
+.menu_perist{width:120px;font-family:굴림;font-size:12px;color:#2f7bc9;font-weight:bold;padding:5px 0px 0px 8px}
+#dataTab{position:absolute;padding-top:311px;margin-left:238px}
+m
+
+

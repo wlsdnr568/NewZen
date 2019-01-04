@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	
+	<!-- 계정과목 테이블 -->
+	<table id="ACCAccSbjT" name="계정코드도움">
+		<field name="BseY" 				sqltype="INT" 		type="INT" 		size="11" 	key="P"/> <!-- 기준년월 -->
+		<field name="AccSbjCd" 			sqltype="INT" 		type="INT" 		size="11" 	key="P"/> <!-- 계정과목코드 -->
+		<field name="AccSbjNm"			sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 계정과목명 -->
+		<field name="AccSbjChrtCd" 		sqltype="VARCHAR" 	type="STRING" 	size="2" 	key="N"/> <!-- 계정과목성격코드 -->
+		<field name="DebCrdSec" 		sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 차대구분 -->
+		<field name="IDcSec" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 증감구분 -->
+		<field name="SbjCd" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 과목코드 -->
+		<field name="RelAccSbjCd" 		sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 관계계정과목코드 -->
+		<field name="UseYn" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 사용여부 -->
+		<field name="InpUpdItmCd" 		sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 입력수정항목코드 -->
+		<field name="AccSbjOutpNm" 		sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 계정과목출력명 -->
+		<field name="AccSbjEngNm"		sqltype="VARCHAR" 	type="STRING" 	size="80" 	key="N"/> <!-- 계정과목영문명 -->
+		<field name="DspyLnNo" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 표시라인번호 -->
+		<field name="AccSbjSysCd" 		sqltype="VARCHAR" 	type="STRING" 	size="3" 	key="N"/> <!-- 계정과목체계코드 -->
+		<field name="LseAccSbjSysCd" 	sqltype="VARCHAR" 	type="STRING" 	size="3" 	key="N"/> <!-- 임대주택자산포함계정과목체계코드 -->
+		<field name="AccDebCrdSec" 		sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 계정차대구분 -->
+	 	<field name="DmmYn1" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmInt1" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmTxt1" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmDbl1" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/>
+		<field name="PrdNo" 			sqltype="VARCHAR" 	type="STRING" 	size="3" 	key="N"/> <!-- 기수 -->
+		<field name="InsertDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/> <!-- 작성일 -->
+		<field name="UpdateDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/>
+	</table>
+	<sheet id="ACCAccSbjT" name="계정코드도움" using="ACCAccSbjT">
+		<headfix id="headfix0">
+			<fixed text="AccSbjCd, AccSbjNm FROM ACCAccSbjT"></fixed>
+		</headfix>
+		<mask id="attribute0" fixtop="0" fixbottom="0" fixedleft="0" fixedright="0">
+			<flag name="AccSbjCd" title="코드" 	width="80"	 	iparam="-D(8) 	-EX(4) 	-A1 -IA" 	type="E_STR"/>
+			<flag name="AccSbjNm" title="과목명" 	width="120" 	iparam="-D(20) 	-EX(40) -A0 -IA" 	type="E_STR"/>
+		</mask>
+		
+		<record id="record0" name="record">
+		</record>
+		<init id="init" name="init" row_height="20" top_head_height="20" property="(UG_GRADIENTTITLE|UG_GRADTNOTCOLUMN)">
+			<function name="SetMixMode" iparam="(TRUE)" />
+		</init>
+	</sheet>
+	
+	<!-- 거래처 테이블 -->
+	<table id="ACCCustT" name="거래처도움">
+		<field name="CustCd" 			sqltype="INT"		type="INT" 		size="11" 	key="P"/> <!-- 거래처코드 -->
+		<field name="CustNm" 			sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 거래처명 -->
+		<field name="CustSec" 			sqltype="VARCHAR" 	type="STRING" 	size="1"	key="N"/> <!-- 거래처구분 -->
+		<field name="CustType" 			sqltype="VARCHAR"	type="STRING" 	size="1" 	key="N"/> <!-- 거래처유형 -->
+		<field name="BusnPersRegsNo" 	sqltype="VARCHAR" 	type="STRING" 	size="13" 	key="N"/> <!-- 사업자등록번호 -->
+		<field name="CustClsfCd" 		sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 거래처분류코드 -->
+		<field name="RegsNo" 			sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 등록번호 -->
+		<field name="RegsNoSec" 		sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 등록번호구분 -->
+		<field name="CardNo" 			sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 카드번호 -->
+		<field name="SrchNo" 			sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 검색번호 -->
+		<field name="ZipNo" 			sqltype="VARCHAR" 	type="STRING" 	size="6" 	key="N"/> <!-- 우편번호 -->
+		<field name="Addr" 				sqltype="VARCHAR" 	type="STRING"	size="80" 	key="N"/> <!-- 주소 -->
+		<field name="AddrDtl" 			sqltype="VARCHAR" 	type="STRING" 	size="80" 	key="N"/> <!-- 주소상세 -->
+		<field name="Tel1" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 전화번호1 -->
+		<field name="Tel2" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 전화번호2 -->
+		<field name="Tel3" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 전화번호3 -->
+		<field name="ExtsNo" 			sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 내선번호 -->
+		<field name="Fax1" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 팩스번호1 -->
+		<field name="Fax2" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 팩스번호2 -->
+		<field name="Fax3" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 팩스번호3 -->
+		<field name="LmtAmt" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/> <!-- 한도액 -->
+		<field name="StDt" 				sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 시작일자 -->
+		<field name="EndDt" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 종료일자 -->
+		<field name="RepstvNm" 			sqltype="VARCHAR" 	type="STRING" 	size="15" 	key="N"/> <!-- 대표자성명 - 일반 -->
+		<field name="BsnCdt" 			sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 업태 - 일반 -->
+		<field name="Itm" 				sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 종목 - 일반 -->
+		<field name="CompChrgEmpCd" 	sqltype="VARCHAR" 	type="STRING" 	size="5" 	key="N"/> <!-- 당사담당사원코드 - 일반 -->
+		<field name="CompChrgEmpNm" 	sqltype="VARCHAR" 	type="STRING" 	size="15" 	key="N"/> <!-- 당사담당사원명 - 일반 -->
+		<field name="PrtCustNm" 		sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 인쇄할거래처명 - 일반 -->
+		<field name="ScrtSetAmt" 		sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/> <!-- 담보설정액 - 일반 -->
+		<field name="LiqCd" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 주류코드 - 일반 -->
+		<field name="DpsBnkCd" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 입금은행 - 일반 -->
+		<field name="Dsptor" 			sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 예금주 - 일반 -->
+		<field name="AccNo" 			sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 입금계좌번호 - 일반 -->
+		<field name="EmailAddr" 		sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 이메일주소 - 일반 -->
+		<field name="AccOpnBnkCd" 		sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 계좌개설은행 - 금융기관 -->
+		<field name="AccOpnStorNm" 		sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 계과개설점명 - 금융기관 -->
+		<field name="EprtDt" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 만기일 - 금융기관 -->
+		<field name="IntrRate" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/> <!-- 이자율 - 금융기관 -->
+		<field name="MonPaymAmt" 		sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/> <!-- 월납입액 - 금융기관 -->
+		<field name="CrdCardCompCd" 	sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 신용카드사코드 -->
+		<field name="SetmtAccBnkCd" 	sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 결제계좌은행코드 - 카드 -->
+		<field name="SetmtAccNo" 		sqltype="VARCHAR" 	type="STRING" 	size="20" 	key="N"/> <!-- 결제계좌번호 - 카드 -->
+		<field name="Fee" 				sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/> <!-- 수수료 - 카드 -->
+		<field name="SetmtDt" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 결제일 - 카드 -->
+		<field name="ChrgPers" 			sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 담당자 - 카드 -->
+		<field name="HomPg" 			sqltype="VARCHAR" 	type="STRING" 	size="100" 	key="N"/> <!-- 홈페이지 - 카드 -->
+		<field name="UseYn" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 사용여부 -->
+	 	<field name="DmmYn1" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmYn2" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmYn3" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmYn4" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmYn5" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmInt1" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmInt2" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmInt3" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmTxt1" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmTxt2" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmTxt3" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmTxt4" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmTxt5" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmDbl1" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/>
+		<field name="DmmDbl2" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/>
+		<field name="DmmDbl3" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/>
+		<field name="MarkPenUseYn" 		sqltype="VARCHAR" 	type="STRING" 	size="2" 	key="N"/> <!-- 형광펜 -->
+		<field name="PrdNo" 			sqltype="VARCHAR" 	type="STRING" 	size="3"	key="N"/> <!-- 기수 -->
+		<field name="InsertDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/> <!-- 작성일 -->
+		<field name="UpdateDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/>
+	</table>
+	<sheet id="ACCCustT" name="거래처도움" using="ACCCustT">
+		<headfix id="headfix0">
+			<fixed text="CustCd,CustNm,RegsNo,RepstvNm FROM ACCCustT"/>
+		</headfix>
+		<mask id="attribute0" fixtop="0" fixbottom="0" fixedleft="0" fixedright="0">
+			<flag name="CustCd" 	title="코드" 		width="80" 	iparam="-D(8) 	-EX(4) 	-A1 -IA" type="E_STR"/>
+			<flag name="CustNm" 	title="거래처명" 	width="120" iparam="-D(20) 	-EX(40) -A0 -IA" type="E_STR"/>
+			<flag name="RegsNo" 	title="등록번호" 	width="100" iparam="-D(20) 	-EX(40) -A0 -IA" type="E_STR"/>
+			<flag name="RepstvNm" 	title="대표자명" 	width="100" iparam="-D(20) 	-EX(40) -A0 -IA" type="E_STR"/>
+		</mask>
+		
+		<record id="record0" name="record">
+		</record>
+		<init id="init" name="init" row_height="20" top_head_height="20" property="(UG_GRADIENTTITLE|UG_GRADTNOTCOLUMN)">
+			<function name="SetMixMode" iparam="(TRUE)" />
+		</init>
+	</sheet>
+
+	<!-- 적요 테이블 -->
+	<table id="ACCNoteT" name="적요도움">
+		<field name="AccSbjCd" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 계정과목코드 -->
+		<field name="CashTrsfNoteSec" 	sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 현금대체적요구분 -->
+		<field name="NoteNo" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 적요번호 -->
+		<field name="NoteNm" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/> <!-- 수정적요명 -->
+		<field name="DelUpdPsbtYn" 		sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 삭제수정가능여부 -->
+   		<field name="DmmYn1" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmInt1" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmTxt1" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmDbl1" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/>
+		<field name="PrdNo" 			sqltype="VARCHAR" 	type="STRING" 	size="3" 	key="N"/> <!-- 기수 -->
+		<field name="InsertDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/> <!-- 작성일 -->
+		<field name="UpdateDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/>
+	</table>
+	<sheet id="ACCNoteT" name="적요도움" using="ACCNoteT">
+		<headfix id="headfix0">
+			<fixed text="NoteNo, NoteNm FROM ACCNoteT"/>
+		</headfix>
+		<mask id="attribute0" fixtop="0" fixbottom="0" fixedleft="0" fixedright="0">
+			<flag name="NoteNo" title="코드"	 width="80" 	iparam="-D(8) 	-EX(4) -A1 -IA" 	type="E_STR"/>
+			<flag name="NoteNm" title="적요명" width="150" 	iparam="-D(20) 	-EX(40) -A0 -IA" 	type="E_STR"/>
+		</mask>
+		
+		<record id="record0" name="record">
+		</record>
+		<init id="init" name="init" row_height="20" top_head_height="20" property="(UG_GRADIENTTITLE|UG_GRADTNOTCOLUMN)">
+			<function name="SetMixMode" iparam="(TRUE)"/>
+		</init>
+	</sheet>
+	
+	<!-- 부서사원 테이블 -->
+	<table id="ACCDeptEmpT" name="부서사원코드도움">
+		<field name="DeptEmpCd" 		sqltype="VARCHAR" 	type="STRING" 	size="5" 	key="N"/> <!-- 부서사원코드 -->
+		<field name="DeptEmpNm" 		sqltype="VARCHAR" 	type="STRING" 	size="15" 	key="N"/> <!-- 부서사원명 -->
+		<field name="DeptEmpSec" 		sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 부서사원구분 -->
+		<field name="SrcEmpCd"			sqltype="VARCHAR" 	type="STRING" 	size="10" 	key="N"/> <!-- 원천사원코드 -->
+		<field name="EntCompDt" 		sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 입사일자 -->
+		<field name="DeptChngReasCd" 	sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 부서변동사유코드 -->
+		<field name="DeptChngDt" 		sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 부서변동일자 -->
+		<field name="DeptDspySeq" 		sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 부서표시순번(원천징수에서사용) -->
+		<field name="UseYn" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/> <!-- 사용여부 -->
+   		<field name="DmmYn1" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmYn2" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmYn3" 			sqltype="VARCHAR" 	type="STRING" 	size="1" 	key="N"/>
+		<field name="DmmInt1" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmInt2" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmInt3" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/>
+		<field name="DmmTxt1" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmTxt2" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmTxt3" 			sqltype="VARCHAR" 	type="STRING" 	size="50" 	key="N"/>
+		<field name="DmmTDbl1" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/>
+		<field name="DmmTDbl2" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/>
+		<field name="DmmTDbl3" 			sqltype="DOUBLE" 	type="DOUBLE" 	size="" 	key="N"/> 
+		<field name="RsdcRegsNo" 		sqltype="VARCHAR" 	type="STRING" 	size="13" 	key="N"/> <!-- 주민등록번호 -->
+		<field name="Email" 			sqltype="VARCHAR" 	type="STRING" 	size="100" 	key="N"/> <!-- 이메일 -->
+		<field name="Tel1" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 전화번호1 -->
+		<field name="Tel2" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 전화번호2 -->
+		<field name="Tel3" 				sqltype="VARCHAR" 	type="STRING" 	size="4" 	key="N"/> <!-- 전화번호3 -->
+		<field name="RetDt" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 퇴사일자 -->
+		<field name="DutyCd" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 직위코드 -->
+		<field name="DutyNm" 			sqltype="VARCHAR" 	type="STRING" 	size="15" 	key="N"/> <!-- 직위명 -->
+		<field name="PayStepCd" 		sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 호봉코드 -->
+		<field name="PayStepNm" 		sqltype="VARCHAR" 	type="STRING" 	size="15" 	key="N"/> <!-- 호봉명 -->
+		<field name="SptCd" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 현장코드 -->
+		<field name="PjtCd" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 프로젝트코드 -->
+		<field name="Auth" 				sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 권한(0.미사용, 1.관리자, 9.일반) -->
+		<field name="WebAuth" 			sqltype="VARCHAR" 	type="STRING" 	size="100"	key="N"/> <!-- Now-Web 권한 여부 -->
+		<field name="UpLoadId" 			sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 데이터 싱크 세무사랑 아이디 -->
+		<field name="IsDel" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 삭제여부(0.미삭제, 1.삭제) -->
+		<field name="IsSync" 			sqltype="INT" 		type="INT" 		size="11" 	key="N"/> <!-- 동기화여부(0.동기화, 1.비동기화) -->
+		<field name="LastDt" 			sqltype="VARCHAR" 	type="STRING" 	size="30" 	key="N"/> <!-- 싱크코드 -->
+		<field name="MarkPenUseYn" 		sqltype="VARCHAR" 	type="STRING" 	size="2" 	key="N"/> <!-- 형광펜 -->
+		<field name="PrdNo" 			sqltype="VARCHAR" 	type="STRING" 	size="3" 	key="N"/> <!-- 기수 -->
+		<field name="InsertDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/> <!-- 작성일 -->
+		<field name="UpdateDt" 			sqltype="DATETIME" 	type="DATE" 	size="1" 	key="N"/>
+	</table>
+	<sheet id="ACCDeptEmpT" name="부서/사원코드도움" using="ACCDeptEmpT">
+		<headfix id="headfix0">
+			<fixed text="DeptEmpCd, DeptEmpNm FROM ACCDeptEmpT"/>
+		</headfix>
+		<mask>
+			<flag name="DeptEmpCd" title="코드" 			width="80" 	iparam="-D(8) 	-EX(4) 	-A1 -IA" type="E_STR"/>]
+			<flag name="DeptEmpNm" title="부서(사원)명" 	width="120" iparam="-D(20) 	-EX(40) -A0 -IA" type="E_STR"/>
+		</mask>
+		
+		<record id="record0" name="record">
+		</record>
+		<init id="init" name="init" row_height="20" top_head_height="20" property="">
+			<function name="SetMixMode" iparam="(TRUE)"/>
+		</init>
+	</sheet>
+	
+	
+	
+</root>
+
+

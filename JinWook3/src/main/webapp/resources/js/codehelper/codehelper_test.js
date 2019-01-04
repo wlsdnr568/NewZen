@@ -298,28 +298,6 @@ function initCodeHelperEvents() {
 			$("#btnCodeHelperOk").trigger("click");
 	    }
         
-		/*
-        //# CASE : custom_filter 사용한 조회
-        if(optValue != 0) {
-        	
-        	let columns = gvCodeHelper.getColumnNames(true);
-        	
-        	// custom filter 초기화
-        	for (let i=0; i<columns.length; i++) {
-        		gvCodeHelper.removeColumnFilters(columns[i], "custom_filter");
-        	}
-        	
-        	// 검색조건 포함하는 custom filter 설정
-        	let filters = {
-        			name: "custom_filter",
-        			criteria: "value like '%" + txtVal + "%'",
-        			active: true
-        	};
-        	
-        	gvCodeHelper.addColumnFilters(columns[optValue - 1], filters);
-        	gvCodeHelper.activateColumnFilters(columns[optValue - 1], "custom_filter", true);
-        } 
-        */
 	});
 
 	gvCodeHelper.onKeyUp = function (grid, key, ctrl, shift, alt) {

@@ -1,0 +1,13 @@
+#tab_02 div, #tab_02 ul{padding:0;font-family:굴림;margin-right: 20;font-size:12px;color:#000000;}
+#tab_02 {width:53.2%;border:0px solid #000000;position:absolute}
+#gvFinComp{width:40.3%;height:98.3%;border:0px solid #000000;position:absolute;float:left;margin:5px 0px 0px 5px}
+#jqFinComp{width:56%;border:0px solid #000000;position:absolut;float:right;margin: 0px 0px 20px 0px;}
+#gvAutoTaxPaym{width:56%; float:right;border:0px solid #000000;position:absolut;margin:15px 17px 0px 0px}
+
+/* 
+div,ul{margin:0;padding:0;font-family:굴림;font-size:12px;color:#000000}
+#boardTbl{width:53.2%;border:0px solid #000000;position:absolute}
+#tblList{width:40.3%;height:98.3%;border:0px solid #000000;position:absolute;float:left;margin:5px 0px 0px 5px}
+#boxForm{width:56%;border:0px solid #000000;position:absolut; float:right;margin:15px 16px 0px 0px}
+#gradeForm{width:56%; float:right;border:0px solid #000000;position:absolut;margin:15px 17px 0px 0px}
+ */

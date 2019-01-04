@@ -1,0 +1,256 @@
+body li {
+	font-family: 굴림;
+	font-size: 12px;
+	list-style: none;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+/*상단부분*/
+#header {
+	width: 100%;
+	height: 46px;
+	background: #2f7bc9;
+	position: absolute;
+	left:0px;
+	top:0px;
+}
+/*상단부분*/
+
+/*하단부분*/
+#footer{
+	position: fixed;
+    width:100%;
+    height:44px;   
+    left:0px;
+  	bottom:0px;
+	background-color:#f5f8fb;
+}
+/*하단부분*/
+
+
+/*하단주소*/
+#footer_top{
+	width:1024px; 
+	height: 44px; 
+	margin:auto;	
+}
+#footer_contents{
+	float: left;
+	width:320;
+	height: 44px;	
+}
+.footer_icon{
+	width:16px;
+	height:44px; 
+	display: inline; 
+	position: absolute; 
+	line-height:39px;
+	float: left; 
+	text-align: center;
+}
+.footer_text{
+	width: 100%; 
+	padding: 13px 0px 0px 22px;
+	font-family: 굴림;
+	font-size:13px;
+	color: #000000;
+}
+#footer_img{
+	float: right; 
+	width:153px; 
+	height: 44px;
+}
+.footer_line{
+	width: 16px; 
+	height: 44px;
+	line-height: 39px;
+	float: left;
+	text-align: center;
+}
+.footer_vvip{
+	width:35px; 
+	height:44px;
+	line-height:39px; 
+	float: left; 
+	text-align: right;
+}
+.footer_newzen{
+	width:70px; 
+	height:44px;
+	line-height:39px; 
+	float: left;
+	text-align: right;
+}
+.footer_bottom{
+	width:16px; 
+	height: 44px;
+	line-height:39px;
+	float:right; 
+	text-align: right;
+}
+/*하단주소*/
+
+
+
+/*탭메뉴*/
+
+
+
+
+
+
+
+/* 탭메뉴*/
+#tab_menu{
+	width:100%; 
+	height: 27px;		
+}
+/* 탭메뉴*/
+
+
+
+/* 공통 탭부분*/
+#tab_common{
+	width: 100%; 
+	height: 34px; 
+	background: #d1e5fa; 
+	margin-top: 2px; 
+	float:left;
+}
+
+#tab_many{
+	width: 1024px; 
+	height: 34px; 
+	margin-top: 50px; 
+	margin: 0 auto;
+}
+.tab_tool{
+	padding-top:5px;
+	float:left;
+	width: 53px;
+	height: 23px;
+}
+/* 공통 탭부분*/
+
+
+
+/*툴바 부분*/
+p a {
+	font-family: 굴림체;
+	font-size: 12px;
+	color: #626b71;
+
+}
+
+a{
+	text-decoration:none;
+	font-family: 굴림체;
+	font-size: 12px;
+	color: #626b71;
+	}
+
+ul#nav {
+	width:1024px;
+	float:left;
+	list-style: none;
+	height: 10px;
+	margin-top:0px;
+
+}
+
+ul#nav li a {
+	display: block;
+	border: 1px solid #f5f8fb;
+	background:#f5f8fb;
+	padding: 7px 8px;
+	margin-top:5px; 
+}
+
+ul#nav li a:hover{
+	background:#f5f8fb;
+	color:#737171;
+	border: 1px solid #99bee4;
+	}
+	
+ul#nav li {
+	float: left;
+	position: relative;
+	text-align: left;
+	margin-right:5px;
+	cursor: pointer;
+}
+
+ul#nav li.current a{
+	background:#ddd;
+	}
+
+ul#nav li.current a:hover{
+	background:#888;
+	}
+
+li ul {
+	display: none;
+	position: absolute;
+	width:100px;
+	top: 0;
+	left: 0;
+	font-weight: normal;
+	padding: 5px 0 10px 0;
+	margin-left:-1px;
+}
+
+ul#nav li ul.sub li{
+	border-width:0 1px 1px 1px!important;
+}
+
+ul#nav li ul.sub li a{
+	font-weight: normal!important;	
+}
+
+li>ul {
+	top: auto;
+	left: auto;
+}
+
+li:hover ul, li.over ul {
+	display: block;
+}
+
+#tool_bar{
+	width:100%; 
+	height: 44px; 
+	background-color: #f5f8fb; 
+	margin-top: 34px; 
+	border-bottom: 1px solid #8099b1;
+}
+
+.tool_bar_interval{
+	width:1024px; 
+	height: 34px; 
+	margin: 0 auto; 
+	border: 1px solid #f5f8fb;
+}
+/*툴바부분*/
+
+
+/*하단탭부분*/
+#tool_tab{
+	width:1024px; 
+	height: 708px; 
+	border: 1px solid # 000000; 
+	margin: 0 auto;
+}
+/*하단탭부분*/
+
+
+
+
+
+
+
+
+
+

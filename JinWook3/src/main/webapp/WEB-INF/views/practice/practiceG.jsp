@@ -62,8 +62,8 @@
 <title>realGrid</title>
 </head>
 <body>
-<%@ include file="/WEB-INF/views/include/header.jsp" %>
-<%@ include file="/WEB-INF/views/include/aside.jsp" %>
+<%@ include file="/WEB-INF/views/include1/header.jsp" %>
+<%@ include file="/WEB-INF/views/include1/aside.jsp" %>
 <div style="border: 1px solid black; width:60%;margin: 0 auto; margin-top: 20px; height: 875px">
 
 	<div id="box" style="width: 95%; margin: 0 auto; margin-top: 20px;">

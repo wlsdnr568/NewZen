@@ -1,0 +1,21 @@
+.ui-tabs .ui-tabs-panel{display:block;border-width:0;background:none;padding:0}
+p a {font-family:굴림체;font-size:12px;color:#626b71}
+a{text-decoration:none;font-family:굴림체;font-size:12px;color:#626b71}
+#tool_tab{width:1024px;height:708px;margin: 0 auto}	
+#tool_tab .ui-tabs-nav{padding-left:0px;background:transparent;border-width: 0px 0px 1px 0px;-moz-border-radius:0px;-webkit-border-radius:0px;border-radius:0px}
+td{font-family:굴림;color:#000000;font-size:12px}
+div.TabView div.Tabs{height:24px;overflow: hidden}
+div.TabView div.Tabs a{float:left;display:block;width:190px;text-align:left;height:22px;padding-top:5px;padding-left:7px;vertical-align:middle;border: 1px solid #8099b1;border-bottom-width:0;text-decoration:none;font-family:굴림;font-size:12px;color:#4d4d4d;}
+div.TabView div.Tabs a:hover, div.TabView div.Tabs a.Active{background-color:#d1e5fa;border-top:1px solid #5a6168;border-left:1px solid #5a6168;border-right: 1px solid #5a6168}	
+div.TabView div.Pages{clear:both;border:1px solid #8099b1;overflow:hidden;width:1024px;height:720px}	
+div.TabView div.Pages div.Page{height:100%;padding:0px;overflow:hidden}	
+div.TabView div.Pages div.Page div.Pad{padding:3px 5px}	
+li{list-style: none}	
+/*분류등록 dlg*/
+#layer_ification{width:280px;height:397px;border:1px solid #2f7bc9}	
+#layer_cont{width:260px;height:300px;border:1px solid #cb1f1f;margin-top:60px;margin:10px 0px 0px 8px}
+#layer_file{width:260px;height:17px;margin-top:60px;margin:10px 0px 0px 8px}	
+#layer_footer{width:189px;height:30px;border:0px solid #cb1f1f;margin:0 auto}
+.layer_btn_confim1{width:40px;height:23px;float:left;padding-top:10px}
+.layer_btn_exit1{width:35px;height:23px;padding-top:10px;float:left}
+/*분류등록*/

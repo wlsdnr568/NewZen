@@ -22,7 +22,6 @@
 <script type="text/javascript" src="<c:url value="/resources/js/common/common.js"/>"></script>
 <script type="text/javascript" src="<c:url value="/resources/js/common/grid.js"/>"></script>
 
-
 <style type="text/css">
 div {
 	z-index: 0
@@ -62,20 +61,20 @@ input{
 
 	<div id="mask"></div>
 	<!-- 	 헤더 -->
-	<%@ include file="/WEB-INF/views/include/header.jsp"%>
+	<%@ include file="/WEB-INF/views/include1/header.jsp"%>
 
 	<!-- 	 내용 -->
 	<div id="cont">
 
 		<!-- 	 	내용 -> 메뉴 -->
-		<%@ include file="/WEB-INF/views/include/aside.jsp"%>
+		<%@ include file="/WEB-INF/views/include1/aside.jsp"%>
 
 		<!-- 	 	내용 -> 메인 화면 -->
 		<div id="cont_right">
 
-			<div style="border: 1px solid gray; width: 85%; margin: 0 auto; margin-top: 20px; height: 800px">
+			<div id="wrapBox" style="border: 1px solid gray; width: 85%; margin: 0 auto; margin-top: 20px; height: 800px">
 
-				<div id="box" style="width: 95%; margin: 0 auto; margin-top: 20px;">
+				<div id="box" style="width: 98%; margin: 0 auto; margin-top: 20px;">
 					<input type="text" id="datepicker" size="14" style="text-align: center;border: 1px solid black"> 
 					<input type="button" value="변경" id="change" style="border: 1px solid black"> 
 					<label for="exchage">현금잔액:</label>
@@ -84,7 +83,7 @@ input{
 					<input type="text" readonly="readonly" id="asd" style="border: 1px solid black">
 				</div>
 
-				<div id="realgrid" style="width: 95%; height: 500px; border: 1px solid gray; margin: 0 auto; margin-top: 20px"></div>
+				<div id="realgrid" style="width: 98%; height: 500px; border: 1px solid gray; margin: 0 auto; margin-top: 20px"></div>
 				<button id="addBtn" style="display: none" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-backdrop="static" data-target="#addRowDialog">Addrows</button>
 				<div id="subBox" style="width: 95%; height: 250px; margin: 0 auto; margin-top: 20px; margin-bottom: 5px; display: none">
 					<div style="width: 100%; height: 25px; border: 1px solid black; margin: 4px auto;">적요</div>

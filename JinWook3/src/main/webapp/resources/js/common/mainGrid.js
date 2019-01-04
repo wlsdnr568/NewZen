@@ -36,7 +36,7 @@ function initMainGrid() {
 		dataType : "text"
 	}, {
 		fieldName : "accSbjCd",
-		dataType: "number"
+		dataType : "number"
 	}, {
 		fieldName : "accSbjNm",
 		dataType : "text"

@@ -1,77 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<style type="text/css">
-	#header_wrapBox1{
-		width: 100%;
-		height: 60px;     
-		border: 1px solid #2f7bc9;
-		background-color: #2f7bc9;
-	}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <%-- <meta http-equiv="refresh" content="<%=session.getMaxInactiveInterval()%>; url=login" /> --%>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="Pragma" content="no-cashe"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>뉴젠솔루션</title> 
+    <link rel="stylesheet" type="text/css" href="<c:url value="/resources/css1/sub.css"/>" />
+	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css1/tab.css"/>" />
+	<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css1/jquery-ui.css"/>" />
+    
+    <script src="<c:url value="/resources/js/jquery-3.3.1.min.js"/>"></script>
+    <script src="<c:url value="/resources/js/common.js" />"></script>
+    <script src="<c:url value="/resources/js/datepicker.js" />"></script>
+    <script src="<c:url value="/resources/js/jquery-ui.js" />"></script>    
+	<script src="<c:url value="/resources/js/realgridjs-lic.js"/>"></script>
+	<script src="<c:url value="/resources/js/realgridjs_eval.1.1.30.min.js"/>"></script>
+	<script src="<c:url value="/resources/js/realgridjs-api.1.1.30.js" />"></script>
+	<script src="<c:url value="/resources/js/jszip.min.js" />"></script>
+	<script src="<c:url value="/resources/js/codehelper/sub_menu.js" />"></script>
 	
-	#header_wrapBox2{
-		width: 1440px; 
-		height: 59px;     
-		border: 1px solid #2f7bc9;
-		background-color: #2f7bc9;
-		margin: auto;
-	}
-	
-	#header_logoBox{
-		position: fixed;
-		display: inline-block;
-		float: left;
-		padding-top: 12px;
-	}
-	
-	#header_logo{
-		font-size: 23px;
-		color: white;
-		font-weight: bold;
-	}
-	
-	#header_slash{
-		font-size: 23px;
-		color: white;
-	}
-	
-	#header_name{
-		font-size: 23px;
-		color: white;
-	}
-	
-</style>
-<title>header</title>
-</head>
-<body>
-
-	<div id="header_wrapBox1">
-	
-		<div id="header_wrapBox2">
-			
-			<div id="header_logoBox">
-				<span id="header_logo" style="cursor: pointer;" onclick="location.href='main'">NewZen </span>
-				<span id="header_slash"> | </span>
-				<span id="header_name"> 게시판</span>
-			</div>
-			
-			<%String id = (String)session.getAttribute("userId");%>
-			<div style="color: white;float: right;">
-				<div>'<%=id%>'님 반갑습니다.</div>
-				<a id="logout" style="color: white;float: right;font-weight: bold" href="/jinWook3/logOut">로그아웃</a> 
-			</div>
-			
-		</div>
-		
-	</div>
-	
-	
-</body>
-</html>
-
-
-
+    

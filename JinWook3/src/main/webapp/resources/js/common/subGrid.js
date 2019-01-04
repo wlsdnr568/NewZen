@@ -157,7 +157,7 @@ function initSubGrid() {
 	
 	//서브 그리드 컬럼푸터 병합
 	subGridView.setFooter({
-		mergeCells: ["noteNo","noteNm"]
+		mergeCells:["noteNo","noteNm"]
 	})
 	
 	//서브 그리드 옵션 설정

@@ -20,12 +20,17 @@ import com.my.test.element.Root;
 import com.my.test.element.Root_Sheet;
 import com.my.test.element.Root_Sheet_Headfix;
 import com.my.test.element.Root_Sheet_Mask;
+import com.my.test.mapper.CodeHelperMapper;
+import com.my.test.model.Cust;
 
 @Service
 public class CodeHelperServiceImpl implements CodeHelperService{
 
 	@Autowired
 	JdbcTemplate jdbcTemplate;
+	
+	@Autowired
+	CodeHelperMapper codeHelperMapper;
 	
 	@Override
 	public String loadCodeHelperData(String filePath, String tableName, String attributeStr, String headfixStr, String whereStr)
@@ -39,12 +44,14 @@ public class CodeHelperServiceImpl implements CodeHelperService{
 			
 			// Xml 파일 읽어옴
 			Root root = (Root)um.unmarshal(new File(filePath));
+			System.out.println(root);
 			
 			Root_Sheet_Headfix headfix = null;
 			Root_Sheet_Mask mask = null;
 			
 			// Sheet 가져옴
 			for(Root_Sheet root_sheet : root.getSheet()) {
+				
 				if(root_sheet.getId().equals(tableName.toUpperCase())) {
 					// Title 가져옴
 					jsonMap.put("title", root_sheet.getName());
@@ -61,6 +68,7 @@ public class CodeHelperServiceImpl implements CodeHelperService{
 					for(Root_Sheet_Mask root_sheet_mask : root_sheet.getMask()) {
 						if(root_sheet_mask.getId().equals("attribute" + attributeStr)) {
 							mask = root_sheet_mask;
+							
 							break;
 						}
 					}
@@ -107,8 +115,15 @@ public class CodeHelperServiceImpl implements CodeHelperService{
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
-		
 		return jsonStr;
+	}
+
+	@Override
+	public List<Cust> getCustTData(String custCd) { 
+		
+		List<Cust> custList = codeHelperMapper.getCustTData(custCd);
+		
+		return custList;
 	}
 
 	

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"      
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.newzen.my.mapper.DetailMapper">
+
+<!-- Map을 파라미터로 받는 쿼리 -->
+<!-- 	<update id="updateFormData" parameterType="map"> -->
+<!-- 		UPDATE ACCCustT  -->
+<!-- 		SET custNm = #{custNm},  -->
+<!-- 			repstvNm = #{repstvNm},  -->
+<!-- 			bsnCdt = #{bsnCdt},  -->
+<!-- 			itm = #{itm},  -->
+<!-- 			zipNo = #{zipNo},  -->
+<!-- 			addr = #{addr},  -->
+<!-- 			addrDtl = #{addrDtl},  -->
+<!-- 			tel1 = #{tel1},  -->
+<!-- 			tel2 = #{tel2},  -->
+<!-- 			tel3 = #{tel3},  -->
+<!-- 			regsNo = #{regsNo}, -->
+<!-- 			busnPersRegsNo = #{busnPersRegsNo} -->
+<!-- 		WHERE custCd = #{custCd} -->
+<!-- 	</update> -->
+	
+<!-- VO를 파라미터로 받는 쿼리 -->
+	<update id="updateFormData1" parameterType="Cust">
+		UPDATE ACCCustT 
+		SET custNm = #{custNm}, 
+			repstvNm = #{repstvNm}, 
+			bsnCdt = #{bsnCdt}, 
+			itm = #{itm}, 
+			zipNo = #{zipNo}, 
+			addr = #{addr}, 
+			addrDtl = #{addrDtl}, 
+			tel1 = #{tel1}, 
+			tel2 = #{tel2}, 
+			tel3 = #{tel3}, 
+			regsNo = #{regsNo},
+			busnPersRegsNo = #{busnPersRegsNo}
+		WHERE custCd = #{custCd}
+	</update>
+
+</mapper>    

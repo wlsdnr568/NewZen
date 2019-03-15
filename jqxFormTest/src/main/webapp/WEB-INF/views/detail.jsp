@@ -12,7 +12,7 @@
 		require(["initDetail3"], function (){});
 		
 	</script>
- 
+  <!--  -->
 <head>
 <meta charset="utf-8">
 <title></title>

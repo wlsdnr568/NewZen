@@ -116,7 +116,7 @@ const VK = Object.freeze({
  *          
  */
 
-define(["https://jqwidgets.com/public/jqwidgets/jqx-all.js"], function(jq){
+define(["jqx-all"], function(jq){
     let createInstance = (function(base) {
         alert("들어왔다")
         function createInstance() {

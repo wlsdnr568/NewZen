@@ -118,6 +118,7 @@ const VK = Object.freeze({
 
 define(["https://jqwidgets.com/public/jqwidgets/jqx-all.js"], function(jq){
     let createInstance = (function(base) {
+        alert("들어왔다")
         function createInstance() {
             // 해당 IIFE 엄격한 검사처리
             "use strict";
